@@ -11,5 +11,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.Spash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.MainMenu"/>
+        <activity android:name=".ui.ConnectionSettings"/>
+        <activity android:name=".ui.RCBuilder"/>
+        <service android:name=".transport.ConnectionHandlingService"/>
     </application>
 </manifest> 
