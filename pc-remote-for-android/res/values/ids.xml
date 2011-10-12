@@ -1,0 +1,7 @@
+<resources>
+    <item name="textView1" type="id"/>
+    <item name="devicelist" type="id"/>
+    <item name="helloLinLay" type="id"/>
+    <item name="connSettingsButton" type="id"/>
+    <item name="touchpadButton" type="id"/>
+</resources>
