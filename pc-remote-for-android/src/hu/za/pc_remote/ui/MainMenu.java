@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import hu.za.pc_remote.HelloActivity;
 import hu.za.pc_remote.R;
+import hu.za.pc_remote.transport.ConnectionHandlingService;
+import hu.za.pc_remote.ui.RCBuilder.RCBuilder;
 
 /**
  * Created by IntelliJ IDEA.
@@ -21,13 +23,26 @@ public class MainMenu extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        final Intent i = new Intent(this, ConnectionHandlingService.class);
+        startService(i);
+
         setContentView(R.layout.mainmenu);
 
         Button button = (Button)findViewById(R.id.connSettingsButton);
         button.setOnClickListener(new MainMenuEntry(ConnectionSettings.class));
 
         button = (Button)findViewById(R.id.touchpadButton);
-        button.setOnClickListener(new MainMenuEntry(HelloActivity.class));
+        button.setOnClickListener(new MainMenuEntry(RCBuilder.class));
+
+        button = (Button)findViewById(R.id.exitButton);
+        button.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View view) {
+                stopService(i);
+                finish();
+            }
+        });
     }
 
 

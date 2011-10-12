@@ -4,4 +4,8 @@
     <item name="helloLinLay" type="id"/>
     <item name="connSettingsButton" type="id"/>
     <item name="touchpadButton" type="id"/>
+    <item name="connSettingsLinearLayout" type="id"/>
+    <item name="connectedToTextView" type="id"/>
+    <item name="disconnectButton" type="id"/>
+    <item name="exitButton" type="id"/>
 </resources>

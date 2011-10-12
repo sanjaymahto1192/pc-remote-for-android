@@ -2,9 +2,6 @@ package hu.za.pc_remote.ui.RCBuilder;
 
 import android.os.Environment;
 import android.test.ActivityInstrumentationTestCase2;
-import android.widget.TextView;
-import hu.za.pc_remote.HelloActivity;
-import hu.za.pc_remote.R;
 
 import java.io.*;
 
@@ -29,8 +26,8 @@ public class RCBuilderTest extends ActivityInstrumentationTestCase2<RCBuilder> {
         mActivity = this.getActivity();
     }
 
-    public void testPreconditions() {
-        mActivity.getRCDirectories();
+/*    public void testPreconditions() {
+        mActivity.getViews();
 
         try {
             FileReader fr = new FileReader(Environment.getDataDirectory().getPath() + File.pathSeparatorChar + "pcremote" + File.pathSeparatorChar + "file");
@@ -39,5 +36,5 @@ public class RCBuilderTest extends ActivityInstrumentationTestCase2<RCBuilder> {
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
-    }
+    }*/
 }

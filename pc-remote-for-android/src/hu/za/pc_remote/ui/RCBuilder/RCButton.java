@@ -21,6 +21,7 @@ public class RCButton extends Button implements View.OnClickListener {
 
     public RCButton(RCAction prototype, Context context) {
         super(context);
+        this.context = context;
         this.prototype = prototype;
         setOnClickListener(this);
     }

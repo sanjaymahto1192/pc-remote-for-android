@@ -31,6 +31,7 @@ public class TouchPad extends SurfaceView implements SurfaceHolder.Callback {
 
     public TouchPad(Context context) {
         super(context);
+        this.context=context;
 
         gestureDetector = new GestureDetector(new MyGestureListener());
         x = 100;

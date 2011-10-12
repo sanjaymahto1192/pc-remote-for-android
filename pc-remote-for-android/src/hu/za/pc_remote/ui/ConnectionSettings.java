@@ -1,28 +1,29 @@
 package hu.za.pc_remote.ui;
 
+import android.app.ProgressDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.Intent;
-import android.content.ServiceConnection;
+import android.content.*;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.*;
 import hu.za.pc_remote.R;
 import hu.za.pc_remote.transport.ConnectionHandlingService;
+import hu.za.pc_remote.transport.Disconnector;
 import hu.za.pc_remote.transport.TransportManager;
 
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.Set;
 import java.util.UUID;
+
+import android.os.Handler;
+
+import java.util.logging.LogRecord;
 
 /**
  * Created by IntelliJ IDEA.
@@ -39,26 +40,51 @@ public class ConnectionSettings extends UIActivityBase {
     private ConnectionHandlingService mConnService;
     private ArrayAdapter mDevicesAdapter;
     private String mAddress;
+    private BluetoothSocket socket;
 
     private AdapterView.OnItemClickListener mDeviceClickListener = new AdapterView.OnItemClickListener() {
-
 
         public void onItemClick(AdapterView<?> av, View v, int arg2, long arg3) {
             String info = mDevicesAdapter.getItem(arg2).toString();
             mAddress = info.substring(info.length() - 17);
-            doBindService();
+            final ProgressDialog dialog = ProgressDialog.show(ConnectionSettings.this, "", getString(R.string.loading), true);
+
+            final Handler handler = new Handler() {
+                public void handleMessage(Message msg) {
+                    dialog.dismiss();
+                    setDisconnectLayout();
+                }
+            };
+
+            new Thread() {
+                @Override
+                public void run() {
+                    BluetoothDevice device = BluetoothAdapter.getDefaultAdapter().getRemoteDevice(mAddress);
+                    connectToDevice(device);
+                    handler.sendEmptyMessage(0);
+                }
+            }.start();
+        }
+    };
+
+    private View.OnClickListener mDisconnectListener = new View.OnClickListener() {
+        public void onClick(View view) {
+            closeSocket();
+            if (mConnService != null) {
+                mConnService.setTransportManager(null, null, null);
+                setConnectLayout();
+            }
         }
     };
 
     private ServiceConnection mConnection = new ServiceConnection() {
         public void onServiceConnected(ComponentName className, IBinder service) {
             mConnService = ((ConnectionHandlingService.LocalBinder) service).getService();
-
-            BluetoothDevice device = BluetoothAdapter.getDefaultAdapter().getRemoteDevice(mAddress);
-            connectToDevice(device);
-
-            Toast.makeText(ConnectionSettings.this, "Connect",
-                    Toast.LENGTH_SHORT).show();
+            if (mConnService.hasTransportManager()) {
+                setDisconnectLayout();
+            } else {
+                setConnectLayout();
+            }
         }
 
         public void onServiceDisconnected(ComponentName className) {
@@ -89,21 +115,13 @@ public class ConnectionSettings extends UIActivityBase {
         doUnbindService();
     }
 
-    private View.OnClickListener mBindListener = new View.OnClickListener() {
-        public void onClick(View v) {
-            doBindService();
-        }
-    };
-
-    private View.OnClickListener mUnbindListener = new View.OnClickListener() {
-        public void onClick(View v) {
-            doUnbindService();
-        }
-    };
-
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.consettings);
+        doBindService();
+    }
+
+    private void setConnectLayout() {
+        setContentView(R.layout.connectlayout);
 
         ListView listView = (ListView) findViewById(R.id.devicelist);
         mDevicesAdapter = new ArrayAdapter(this, R.layout.devicelistitem);
@@ -118,27 +136,55 @@ public class ConnectionSettings extends UIActivityBase {
             }
         } else {
             String noDevices = "No paired device found";
+            listView.setOnItemClickListener(null);
             mDevicesAdapter.add(noDevices);
         }
+    }
 
+    private void setDisconnectLayout() {
+        setContentView(R.layout.disconnectlayout);
+        TextView textView = (TextView) findViewById(R.id.connectedToTextView);
+        if (mConnService != null) {
+            textView.setText(
+                    new StringBuilder(getText(R.string.connectedText))
+                            .append(mConnService.getConnectionInfo())
+            );
+        }
+
+        Button button = (Button) findViewById(R.id.disconnectButton);
+        button.setOnClickListener(mDisconnectListener);
     }
 
     private void connectToDevice(BluetoothDevice device) {
-        BluetoothSocket socket = null;
         try {
             socket = device.createRfcommSocketToServiceRecord(mServiceUUID);
             socket.connect();
             TransportManager transportManager = new TransportManager(new ObjectOutputStream(socket.getOutputStream()));
-            mConnService.setTransportManager(transportManager);
+            mConnService.setTransportManager(
+                    transportManager,
+                    String.format("%s (%s)", device.getName(), device.getAddress()),
+                    new Disconnector() {
+                        public void Disconnect() {
+                            try {
+                                socket.close();
+                            } catch (IOException e) {
+                                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                            }
+                        }
+                    });
         } catch (IOException e) {
-            if (socket != null)
-                try {
-                    socket.close();
-                } catch (IOException e1) {
-                    Log.e(tag, "Failed to close socket", e1);
-                }
+            closeSocket();
             Log.e(tag, "Failed to open Socket:", e);
 
         }
+    }
+
+    private void closeSocket() {
+        if (socket != null)
+            try {
+                socket.close();
+            } catch (IOException e1) {
+                Log.e(tag, "Failed to close socket", e1);
+            }
     }
 }

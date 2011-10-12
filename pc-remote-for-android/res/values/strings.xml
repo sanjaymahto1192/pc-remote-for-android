@@ -4,4 +4,8 @@
     <string name="hello">Hello World</string>
     <string name="connSettingsButtonText">Connection Settings</string>
     <string name="touchpadButtonText">TouchPad</string>
+    <string name="connectedText">Connected to:</string>
+    <string name="disconnectButtonText">Disconnect</string>
+    <string name="loading">Loading...</string>
+    <string name="exitButtonText">Exit</string>
 </resources>

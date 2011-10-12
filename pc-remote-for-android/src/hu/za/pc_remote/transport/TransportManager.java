@@ -17,7 +17,6 @@ import java.util.concurrent.ArrayBlockingQueue;
  */
 public class TransportManager {
     private static final String tag = "TransportManager";
-    private BluetoothDevice device = null;
     private WorkerThread workerThread = null;
 
     public TransportManager(ObjectOutputStream oos) {
@@ -69,6 +68,11 @@ public class TransportManager {
                     Log.e(tag, "Failed to write ObjectOutputStream:", ioe);
                     break;
                 }
+            }
+            try {
+                oos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
     }

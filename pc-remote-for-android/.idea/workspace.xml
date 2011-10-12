@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="INFO" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bbd0535-1e80-40a6-9ed3-d1e464eac738" name="Default" comment="" />
+    <list default="true" id="6bbd0535-1e80-40a6-9ed3-d1e464eac738" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\Andor\diploma\pc-remote-for-android\pc-remote-for-android\res\layout\consettings.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/target/common-1.0.jar" afterPath="$PROJECT_DIR$/../common/target/common-1.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/common.iml" afterPath="$PROJECT_DIR$/../common/common.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../desktop-agent/desktop-agent.iml" afterPath="$PROJECT_DIR$/../desktop-agent/desktop-agent.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java" afterPath="$PROJECT_DIR$/../desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java" />
+    </list>
+    <list id="ce0ba207-41c9-4932-b43d-8938cb4f99a8" name="Failed commit: Default" comment="ConnectionSettings improved (connect/disconnect layout, show connected device, disconnect button)&#10;Disconnector interface added&#10;disconnector added to service, it holds a BT socket and closes it when the connection is closed&#10;RCBuilder parses Views from file&#10;RCBuilder start ConnectionSettings if the service does not have a TransportManager&#10;Exit menu added">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/disconnectlayout.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hu/za/pc_remote/transport/Disconnector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hu/za/pc_remote/utils/StorageConstants.java" />
+      <change type="DELETED" beforePath="C:\Users\Andor\diploma\pc-remote-for-android\pc-remote-for-android\out\production\pc-remote-for-android\hu\za\pc_remote\ui\ConnectionSettings$4.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Andor\diploma\pc-remote-for-android\pc-remote-for-android\out\production\pc-remote-for-android\hu\za\pc_remote\ui\RCBuilder.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Andor\diploma\pc-remote-for-android\pc-remote-for-android\src\hu\za\pc_remote\ui\RCBuilder.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/hu/za/pc_remote/R.java" afterPath="$PROJECT_DIR$/gen/hu/za/pc_remote/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-test/src/hu/za/pc_remote/ui/RCBuilder/RCBuilderTest.java" afterPath="$PROJECT_DIR$/pc-remote-test/src/hu/za/pc_remote/ui/RCBuilder/RCBuilderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/mainmenu.xml" afterPath="$PROJECT_DIR$/res/layout/mainmenu.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/ids.xml" afterPath="$PROJECT_DIR$/res/values/ids.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hu/za/pc_remote/transport/ConnectionHandlingService.java" afterPath="$PROJECT_DIR$/src/hu/za/pc_remote/transport/ConnectionHandlingService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hu/za/pc_remote/transport/TransportManager.java" afterPath="$PROJECT_DIR$/src/hu/za/pc_remote/transport/TransportManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hu/za/pc_remote/ui/ConnectionSettings.java" afterPath="$PROJECT_DIR$/src/hu/za/pc_remote/ui/ConnectionSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hu/za/pc_remote/ui/MainMenu.java" afterPath="$PROJECT_DIR$/src/hu/za/pc_remote/ui/MainMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hu/za/pc_remote/ui/RCBuilder/RCBuilder.java" afterPath="$PROJECT_DIR$/src/hu/za/pc_remote/ui/RCBuilder/RCBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hu/za/pc_remote/ui/RCBuilder/RCButton.java" afterPath="$PROJECT_DIR$/src/hu/za/pc_remote/ui/RCBuilder/RCButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hu/za/pc_remote/ui/RCBuilder/TouchPad.java" afterPath="$PROJECT_DIR$/src/hu/za/pc_remote/ui/RCBuilder/TouchPad.java" />
+    </list>
     <ignored path="pc-remote-for-android.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +56,7 @@
   </component>
   <component name="DebuggerManager">
     <field_breakpoints>
-      <breakpoint url="jar://C:/Program Files/android-sdk-windows/platforms/android-9/android.jar!/android/app/Activity.class" line="13" class="android.app.Activity" package="android.app" field_name="DEFAULT_KEYS_SEARCH_LOCAL">
+      <breakpoint url="jar://C:/Program Files/android-sdk-windows/platforms/android-9/android.jar!/android/app/Activity.class" line="13" class="android.app.Activity" package="" field_name="DEFAULT_KEYS_SEARCH_LOCAL">
         <option name="WATCH_MODIFICATION" value="true" />
         <option name="WATCH_ACCESS" value="false" />
         <option name="ENABLED" value="true" />
@@ -45,7 +73,7 @@
       </breakpoint>
     </field_breakpoints>
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/../desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java" line="84" class="hu.za.pc_remote.desktop_agent.BTManager" package="hu.za.pc_remote.desktop_agent">
+      <breakpoint url="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/MainMenu.java" line="26" class="hu.za.pc_remote.ui.MainMenu" package="hu.za.pc_remote.ui">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -58,20 +86,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/ConnectionSettings.java" line="54" class="hu.za.pc_remote.ui.ConnectionSettings$2" package="hu.za.pc_remote.ui">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/ConnectionSettings.java" line="46" class="hu.za.pc_remote.ui.ConnectionSettings$1" package="hu.za.pc_remote.ui">
+      <breakpoint url="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/MainMenu.java" line="41" class="hu.za.pc_remote.ui.MainMenu$1" package="hu.za.pc_remote.ui">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -125,11 +140,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainMenu.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/MainMenu.java">
+      <file leaf-file-name="ConnectionSettings.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/ConnectionSettings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="89" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="97" column="8" selection-start="3329" selection-end="3466" vertical-scroll-proportion="-11.96">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#setDisconnectLayout#0;class#ConnectionSettings#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,34 +155,65 @@
       <file leaf-file-name="RCBuilder.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/RCBuilder/RCBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="76" selection-start="818" selection-end="818" vertical-scroll-proportion="0.34689265">
+            <state line="54" column="51" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.7383016">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BTManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="108" column="70" selection-start="3527" selection-end="3527" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HelloActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/HelloActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="0" selection-start="1366" selection-end="1460" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RCButton.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/RCBuilder/RCButton.java">
+      <file leaf-file-name="MainMenu.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="17" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
+            <state line="26" column="0" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TouchPad.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/RCBuilder/TouchPad.java">
+      <file leaf-file-name="Intent.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/android-sdk-windows/platforms/android-9/android.jar!/android/content/Intent.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="0" selection-start="2497" selection-end="2846" vertical-scroll-proportion="0.0">
+            <state line="183" column="11" selection-start="16379" selection-end="16379" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <file leaf-file-name="ConnectionHandlingService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/transport/ConnectionHandlingService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="265" selection-end="427" vertical-scroll-proportion="0.0">
+            <state line="65" column="38" selection-start="1974" selection-end="1974" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransportManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/transport/TransportManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="11" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -173,7 +222,7 @@
       <file leaf-file-name="mainmenu.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/mainmenu.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="18" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0">
+            <state line="17" column="38" selection-start="837" selection-end="837" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -182,34 +231,7 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="8" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelloActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/HelloActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="44" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="26" selection-start="1810" selection-end="1810" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BTManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="0" selection-start="2584" selection-end="2637" vertical-scroll-proportion="0.0">
+            <state line="11" column="44" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -229,22 +251,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../common/src/main/java/hu/za/pc_remote/common/RCAction.java" />
-        <option value="$PROJECT_DIR$/../desktop-agent/pom.xml" />
-        <option value="$PROJECT_DIR$/../desktop-agent/src/main/resources/log4j.xml" />
-        <option value="$PROJECT_DIR$/../desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/Main.java" />
-        <option value="$PROJECT_DIR$/../desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java" />
-        <option value="$PROJECT_DIR$/pc-remote-test/src/hu/za/pc_remote/transport/ConnectionHandlingServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/hu/za/pc_remote/transport/TransportManager.java" />
-        <option value="$PROJECT_DIR$/src/hu/za/pc_remote/transport/ConnectionHandlingService.java" />
-        <option value="$PROJECT_DIR$/src/hu/za/pc_remote/ui/ConnectionSettings.java" />
-        <option value="$PROJECT_DIR$/src/hu/za/pc_remote/HelloActivity.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/pc-remote-test/src/hu/za/pc_remote/ui/RCBuilder/RCBuilderTest.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/res/layout/mainmenu.xml" />
-        <option value="$PROJECT_DIR$/src/hu/za/pc_remote/ui/MainMenu.java" />
-        <option value="$PROJECT_DIR$/src/hu/za/pc_remote/ui/RCBuilder/RCClickHandler.java" />
         <option value="$PROJECT_DIR$/src/hu/za/pc_remote/ui/RCBuilder/RCButton.java" />
+        <option value="$PROJECT_DIR$/src/hu/za/pc_remote/ui/RCBuilder/TouchPad.java" />
+        <option value="$PROJECT_DIR$/res/layout/consettings.xml" />
+        <option value="$PROJECT_DIR$/res/layout/connectlayout.xml" />
+        <option value="$PROJECT_DIR$/res/layout/disconnectlayout.xml" />
+        <option value="$PROJECT_DIR$/res/layout/mainmenu.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/hu/za/pc_remote/ui/MainMenu.java" />
+        <option value="$PROJECT_DIR$/src/hu/za/pc_remote/transport/TransportManager.java" />
+        <option value="$PROJECT_DIR$/../desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java" />
+        <option value="$PROJECT_DIR$/src/hu/za/pc_remote/transport/Disconnector.java" />
+        <option value="$PROJECT_DIR$/src/hu/za/pc_remote/ui/ConnectionSettings.java" />
+        <option value="$PROJECT_DIR$/src/hu/za/pc_remote/transport/ConnectionHandlingService.java" />
+        <option value="$PROJECT_DIR$/src/hu/za/pc_remote/ui/RCBuilder/RCBuilder.java" />
       </list>
     </option>
   </component>
@@ -338,198 +360,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="pc-remote-for-android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc_remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc_remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc_remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RCBuilder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc_remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="transport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc_remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc_remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="transport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -930,6 +760,9 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value="SHOW_INHERITED" />
+  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -951,6 +784,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="6bbd0535-1e80-40a6-9ed3-d1e464eac738" name="Default" comment="" />
+      <changelist id="ce0ba207-41c9-4932-b43d-8938cb4f99a8" name="Failed commit: Default" comment="ConnectionSettings improved (connect/disconnect layout, show connected device, disconnect button)&#10;Disconnector interface added&#10;disconnector added to service, it holds a BT socket and closes it when the connection is closed&#10;RCBuilder parses Views from file&#10;RCBuilder start ConnectionSettings if the service does not have a TransportManager&#10;Exit menu added" />
       <created>1316709240527</created>
       <updated>1316709240527</updated>
     </task>
@@ -978,19 +812,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-290" width="1696" height="1066" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993576" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32976446" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24969324" sideWeight="0.21841542" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20920245" sideWeight="0.6702356" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32944787" sideWeight="0.6702356" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20920245" sideWeight="0.6702356" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1027,7 +861,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="RCButton added" />
+    <option name="LAST_COMMIT_MESSAGE" value="ConnectionSettings improved (connect/disconnect layout, show connected device, disconnect button)&#10;Disconnector interface added&#10;disconnector added to service, it holds a BT socket and closes it when the connection is closed&#10;RCBuilder parses Views from file&#10;RCBuilder start ConnectionSettings if the service does not have a TransportManager&#10;Exit menu added" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1044,6 +878,8 @@
     <MESSAGE value="- hello unit test&#10;- transport + transport unit test" />
     <MESSAGE value="- UIBaseActivity added&#10;- isConHandService Running added" />
     <MESSAGE value="RCButton added" />
+    <MESSAGE value="RCBuilderTest added" />
+    <MESSAGE value="ConnectionSettings improved (connect/disconnect layout, show connected device, disconnect button)&#10;Disconnector interface added&#10;disconnector added to service, it holds a BT socket and closes it when the connection is closed&#10;RCBuilder parses Views from file&#10;RCBuilder start ConnectionSettings if the service does not have a TransportManager&#10;Exit menu added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1053,91 +889,122 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pc-remote-test/src/hu/za/pc_remote/transport/ConnectionHandlingServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/RCBuilder/RCButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="45" selection-start="963" selection-end="963" vertical-scroll-proportion="0.34689265" />
+        <state line="23" column="83" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../common/src/main/java/hu/za/pc_remote/common/RCAction.java">
+    <entry file="file://$PROJECT_DIR$/res/values/ids.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="59" selection-start="645" selection-end="645" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/transport/TransportManager.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/connectlayout.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="47" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.0" />
+        <state line="9" column="0" selection-start="402" selection-end="664" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/transport/ConnectionHandlingService.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/disconnectlayout.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="70" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/ConnectionSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="32" selection-start="2410" selection-end="2410" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="25" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="265" selection-end="427" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/mainmenu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="18" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="8" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/HelloActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="44" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="26" selection-start="1810" selection-end="1810" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="0" selection-start="2584" selection-end="2637" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="89" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0">
+        <state line="5" column="44" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/RCBuilder/TouchPad.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="0" selection-start="2497" selection-end="2846" vertical-scroll-proportion="0.0">
+        <state line="77" column="54" selection-start="2368" selection-end="2368" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/RCBuilder/RCButton.java">
+    <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/HelloActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="17" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
+        <state line="52" column="0" selection-start="1366" selection-end="1460" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/mainmenu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="38" selection-start="837" selection-end="837" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="44" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/android-sdk-windows/platforms/android-9/android.jar!/android/content/Intent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="183" column="11" selection-start="16379" selection-end="16379" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/transport/TransportManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="11" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/transport/Disconnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="28" selection-start="130" selection-end="130" vertical-scroll-proportion="0.11525424">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="70" selection-start="3527" selection-end="3527" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/transport/ConnectionHandlingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="38" selection-start="1974" selection-end="1974" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/ConnectionSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="8" selection-start="3329" selection-end="3466" vertical-scroll-proportion="-11.96">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setDisconnectLayout#0;class#ConnectionSettings#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hu/za/pc_remote/ui/RCBuilder/RCBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="76" selection-start="818" selection-end="818" vertical-scroll-proportion="0.34689265">
-          <folding />
+        <state line="54" column="51" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.7383016">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

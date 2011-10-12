@@ -16,6 +16,7 @@ import hu.za.pc_remote.utils.Utils;
 
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.net.InterfaceAddress;
 import java.util.UUID;
 
 /**
@@ -33,7 +34,11 @@ public class ConnectionHandlingService extends Service {
 
     private RCActionReceiver mRcActionReceiver = null;
     private TransportManager mTransportManager = null;
+    private String connectionInfo;
+    private Disconnector disconnector;
+
     private LocalBinder mBinder = new LocalBinder();
+
 
     public int onStartCommand(Intent intent, int flags, int startId) {
         return START_STICKY;
@@ -53,6 +58,14 @@ public class ConnectionHandlingService extends Service {
     }
 
     public void onDestroy() {
+        if(mTransportManager != null){
+            mTransportManager.Stop();
+        }
+
+        if(disconnector != null){
+            disconnector.Disconnect();
+        }
+
         if (mRcActionReceiver != null) {
             unregisterReceiver(mRcActionReceiver);
         }
@@ -81,14 +94,23 @@ public class ConnectionHandlingService extends Service {
         }
     }
 
-    public void setTransportManager(TransportManager manager) {
+    public void setTransportManager(TransportManager manager, String ConnectionInfo, Disconnector disconnector) {
+        this.connectionInfo = ConnectionInfo;
         if(mTransportManager != null){
             mTransportManager.Stop();
         }
+        if(this.disconnector != null){
+            this.disconnector.Disconnect();
+        }
+        this.disconnector = disconnector;
         mTransportManager = manager;
     }
 
     public boolean hasTransportManager(){
-        return mTransportManager == null;
+        return mTransportManager != null;
+    }
+
+    public String getConnectionInfo(){
+        return connectionInfo;
     }
 }
