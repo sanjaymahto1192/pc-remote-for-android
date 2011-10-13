@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.IBinder;
 import android.util.Log;
+import android.util.Xml;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -18,7 +19,12 @@ import hu.za.pc_remote.transport.ConnectionHandlingService;
 import hu.za.pc_remote.ui.ConnectionSettings;
 import hu.za.pc_remote.ui.UIActivityBase;
 import hu.za.pc_remote.utils.StorageConstants;
+import org.xml.sax.SAXException;
+import org.xml.sax.XMLReader;
 
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -100,25 +106,16 @@ public class RCBuilder extends UIActivityBase {
                                 .toString());
 
 
-                br = new BufferedReader(fr);
-                Log.i("getViews", "File opened");
-                String line = br.readLine();
-                while (line != null) {
-                    Log.i("getViews", String.format("Line read:%s", line));
-                    if (line.startsWith("Button")) {
-                        RCAction action = new RCAction();
-                        action.type = RCAction.Type.KEY_PRESS;
-                        action.arguments = new float[]{22};
+                SAXParserFactory spf = SAXParserFactory.newInstance();
+                SAXParser sp = spf.newSAXParser();
+                XMLReader xr = sp.getXMLReader();
+                Xml.parse(fr, new RCXmlParser(xr, this));
 
-                        RCButton button = new RCButton(action, this);
-                        button.setText("Hello");
-                        views.add(button);
-                    } else if (line.startsWith("Touchpad")) {
-                        views.add(new TouchPad(this));
-                    }
-                    line = br.readLine();
-                }
             } catch (IOException e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            } catch (SAXException e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            } catch (ParserConfigurationException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             } finally {
                 if (br != null) {
@@ -131,19 +128,5 @@ public class RCBuilder extends UIActivityBase {
             }
         }
         return views;
-
-/*        File dataDir = Environment.getExternalStorageDirectory();
-File appRootDir = new File(dataDir, "pcremote");
-appRootDir.mkdir();
-File f = new File(appRootDir, "file");
-Log.i("file Path", f.getPath());
-
-try {
-    FileWriter fw = new FileWriter(f);
-    fw.write("HelloWorld");
-    fw.flush();
-} catch (IOException e) {
-    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-}*/
     }
 }

@@ -39,7 +39,7 @@ public class ConnectionHandlingServiceTest extends ServiceTestCase<ConnectionHan
                 }
             });
 
-            service.setTransportManager(new TransportManager(oos));
+            service.setTransportManager(new TransportManager(oos), null, null);
 
             Intent i = new Intent(ConnectionHandlingService.RC_INTENT_ACTION);
             i.putExtra(ConnectionHandlingService.INTENT_DATA_EXTRA_KEY, extra);
