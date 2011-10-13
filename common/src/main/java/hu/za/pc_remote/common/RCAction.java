@@ -18,8 +18,8 @@ public class RCAction implements Serializable {
         KEY_PRESS(2, 1),
         COMMAND(3, 1);
 
-        private int value;
-        private int numberOfArgs;  //TODO not needed
+        private int value;         //TODO is it ever used?
+        private int numberOfArgs;
 
         Type(int value, int argNum){
             this.value = value;
@@ -28,6 +28,10 @@ public class RCAction implements Serializable {
 
         public int getValue(){
             return value;
+        }
+
+        public int getNumberOfArgs(){
+            return numberOfArgs;
         }
     }
 
