@@ -1,8 +1,6 @@
 package hu.za.pc_remote.jersey_webapp;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 
 /** Example resource class hosted at the URI path "/myresource"
  */
