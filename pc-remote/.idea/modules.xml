@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/desktop-agent/desktop-agent.iml" filepath="$PROJECT_DIR$/desktop-agent/desktop-agent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pc-remote.iml" filepath="$PROJECT_DIR$/pc-remote.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pc-remote-for-android/pc-remote-for-android.iml" filepath="$PROJECT_DIR$/pc-remote-for-android/pc-remote-for-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pc-remote-test/pc-remote-test.iml" filepath="$PROJECT_DIR$/pc-remote-test/pc-remote-test.iml" />
+    </modules>
+  </component>
+</project>
+
