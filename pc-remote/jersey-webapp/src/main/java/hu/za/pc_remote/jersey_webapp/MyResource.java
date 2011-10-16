@@ -1,6 +1,7 @@
 package hu.za.pc_remote.jersey_webapp;
 
 import javax.ws.rs.*;
+import java.util.List;
 
 /** Example resource class hosted at the URI path "/myresource"
  */
@@ -14,6 +15,12 @@ public class MyResource {
     @GET 
     @Produces("text/plain")
     public String getIt() {
-        return "Hi there!";
+        List<String> names = DAO.getLayouts();
+        StringBuilder result = new StringBuilder();
+        result.append("Layouts in the DB:\n");
+        for(String s : names){
+            result.append(s).append("\n");
+        }
+        return result.toString();
     }
 }

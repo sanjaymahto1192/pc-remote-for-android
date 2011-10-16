@@ -25,11 +25,14 @@
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-jaxrs:1.7.1" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-xc:1.7.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.8.2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.sun.jersey:jersey-client:1.9-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.sun.jersey:jersey-client:1.8" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.distributions:web-all:10.0-build-20080430" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.embedded:gf-embedded-api:1.0-alpha-4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.api:dtds:resources:9.0.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.api:schemas:resources:9.0.2" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.6" level="project" />
+    <orderEntry type="library" name="Maven: log4j:log4j:1.2.16" level="project" />
+    <orderEntry type="library" name="Maven: c3p0:c3p0:0.9.1.2" level="project" />
   </component>
 </module>
 
