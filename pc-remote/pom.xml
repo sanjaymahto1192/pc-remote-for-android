@@ -6,7 +6,11 @@
 
     <groupId>pc-remote</groupId>
     <artifactId>pc-remote</artifactId>
+    <packaging>pom</packaging>
     <version>1.0</version>
+    <modules>
+        <module>jersey-webapp</module>
+    </modules>
 
-    
+
 </project>

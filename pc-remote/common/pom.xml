@@ -8,6 +8,11 @@
     <artifactId>common</artifactId>
     <version>1.0</version>
 
+    <parent>
+        <groupId>pc-remote</groupId>
+        <artifactId>pc-remote</artifactId>
+        <version>1.0</version>
+    </parent>
 
     <build>
         <plugins>
