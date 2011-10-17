@@ -78,6 +78,12 @@
             <artifactId>c3p0</artifactId>
             <version>0.9.1.2</version>
         </dependency>
+
+        <dependency>
+            <groupId>common</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
     <properties>
         <jersey-version>1.8</jersey-version>

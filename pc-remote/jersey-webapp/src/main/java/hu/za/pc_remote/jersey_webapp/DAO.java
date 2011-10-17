@@ -22,56 +22,190 @@ import java.util.List;
  */
 public class DAO {
     private static final Logger log = Logger.getLogger(DAO.class);
-    private static final String query = "SELECT name as name FROM layouts";
+    private static final String DATASOURCE_CONTEXT = "jdbc/mysqldb";
+    private static final String listLayoutsQuery = "SELECT id as id, name as name FROM layouts";
+    private static final String getLayoutQuery = "SELECT id as id, name as name, text as text FROM layouts WHERE id = ?";
+    private static final String updateLayoutQuery = "UPDATE layouts SET name=?, text=? WHERE id = ?";
+    private static final String insertLayoutQuery = "INSERT INTO layouts(name, text) VALUES(?, ?)";
+    private static final String deleteLayoutQuery = "DELETE FROM layouts WHERE id = ?";
 
 
-    public static List<String> getLayouts(){
+    public static List<ListItem> getLayouts() {
 
-        List<String> result = new ArrayList<String>();
+        List<ListItem> result = new ArrayList<ListItem>();
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
-        try{
+        try {
             connection = getJNDIConnection();
-            preparedStatement = connection.prepareStatement(query);
+            preparedStatement = connection.prepareStatement(listLayoutsQuery);
             resultSet = preparedStatement.executeQuery();
 
-            while(resultSet.next()){
-                result.add(resultSet.getString("name"));
+            while (resultSet.next()) {
+                ListItem item = new ListItem();
+                item.setId(resultSet.getInt("id"));
+                item.setName(resultSet.getString("name"));
+                result.add(item);
             }
 
-        }catch (SQLException se){
+        } catch (SQLException se) {
             log.error(se);
-        }
-        finally {
-            if(resultSet != null)
+        } finally {
+            if (resultSet != null)
                 try {
                     resultSet.close();
                 } catch (SQLException e) {
                     log.error(e);
                 }
-            if(preparedStatement != null)
+            if (preparedStatement != null)
                 try {
                     preparedStatement.close();
                 } catch (SQLException e) {
-                   log.error(e);
+                    log.error(e);
                 }
-            if(connection != null)
+            if (connection != null)
                 try {
                     connection.close();
                 } catch (SQLException e) {
-                   log.error(e);
+                    log.error(e);
                 }
         }
         return result;
     }
 
-    /**
-     * Uses JNDI and Datasource (preferred style).
-     */
-    static Connection getJNDIConnection() {
-        String DATASOURCE_CONTEXT = "jdbc/mysqldb";
+    public static Layout getLayout(int id) {
 
+        Layout result = new Layout();
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = getJNDIConnection();
+            preparedStatement = connection.prepareStatement(getLayoutQuery);
+            preparedStatement.setInt(1, id);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                result.setId(resultSet.getInt("id"));
+                result.setName(resultSet.getString("name"));
+                result.setText(resultSet.getString("text"));
+            }
+
+        } catch (SQLException se) {
+            log.error(se);
+        } finally {
+            if (resultSet != null)
+                try {
+                    resultSet.close();
+                } catch (SQLException e) {
+                    log.error(e);
+                }
+            if (preparedStatement != null)
+                try {
+                    preparedStatement.close();
+                } catch (SQLException e) {
+                    log.error(e);
+                }
+            if (connection != null)
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    log.error(e);
+                }
+        }
+        return result;
+    }
+
+    public static void updateLayout(Layout layout) {
+
+        List<String> result = new ArrayList<String>();
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            connection = getJNDIConnection();
+            preparedStatement = connection.prepareStatement(updateLayoutQuery);
+            preparedStatement.setString(1, layout.getName());
+            preparedStatement.setString(2, layout.getText());
+            preparedStatement.setInt(3, layout.getId());
+            preparedStatement.execute();
+
+        } catch (SQLException se) {
+            log.error(se);
+        } finally {
+            if (preparedStatement != null)
+                try {
+                    preparedStatement.close();
+                } catch (SQLException e) {
+                    log.error(e);
+                }
+            if (connection != null)
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    log.error(e);
+                }
+        }
+    }
+
+    public static void insertLayout(Layout layout) {
+
+        List<String> result = new ArrayList<String>();
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            connection = getJNDIConnection();
+            preparedStatement = connection.prepareStatement(insertLayoutQuery);
+            preparedStatement.setString(1, layout.getName());
+            preparedStatement.setString(2, layout.getText());
+            preparedStatement.execute();
+
+        } catch (SQLException se) {
+            log.error(se);
+        } finally {
+            if (preparedStatement != null)
+                try {
+                    preparedStatement.close();
+                } catch (SQLException e) {
+                    log.error(e);
+                }
+            if (connection != null)
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    log.error(e);
+                }
+        }
+    }
+
+    public static void deleteLayout(int id) {
+
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            connection = getJNDIConnection();
+            preparedStatement = connection.prepareStatement(deleteLayoutQuery);
+            preparedStatement.setInt(1, id);
+            preparedStatement.execute();
+
+        } catch (SQLException se) {
+            log.error(se);
+        } finally {
+            if (preparedStatement != null)
+                try {
+                    preparedStatement.close();
+                } catch (SQLException e) {
+                    log.error(e);
+                }
+            if (connection != null)
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    log.error(e);
+                }
+        }
+    }
+
+    protected static Connection getJNDIConnection() {
         Connection result = null;
         try {
             Context initialContext = new InitialContext();
