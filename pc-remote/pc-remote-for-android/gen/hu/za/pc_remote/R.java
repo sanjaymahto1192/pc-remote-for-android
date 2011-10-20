@@ -26,10 +26,10 @@ public final class R {
     }
     public static final class layout {
         public static final int connectlayout=0x7f030000;
-        public static final int devicelistitem=0x7f030001;
-        public static final int disconnectlayout=0x7f030002;
-        public static final int main=0x7f030003;
-        public static final int mainmenu=0x7f030004;
+        public static final int disconnectlayout=0x7f030001;
+        public static final int main=0x7f030002;
+        public static final int mainmenu=0x7f030003;
+        public static final int simplelistitem=0x7f030004;
     }
     public static final class string {
         public static final int app_name=0x7f050000;

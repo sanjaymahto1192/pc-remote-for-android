@@ -1,0 +1,124 @@
+package hu.za.pc_remote.RCLayoutsManagement;
+
+import android.os.Environment;
+import android.os.Handler;
+import android.util.Log;
+import org.apache.http.HttpHost;
+import org.apache.http.HttpRequest;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicHttpRequest;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import static hu.za.pc_remote.common.LayoutJSONConstants.NAME;
+import static hu.za.pc_remote.common.LayoutJSONConstants.TEXT;
+
+/**
+ * Created by IntelliJ IDEA.
+ * User: Andor
+ * Date: 10/18/11
+ * Time: 8:26 AM
+ * To change this template use File | Settings | File Templates.
+ */
+public class NetworkManager {
+
+    private HttpHost host = new HttpHost("http://192.168.1.100", 8080);
+    private static final String getLayoutURI = "/jersey-webapp/webresources/layouts?id=";
+    private static final String listURI = "/jersey-webapp/webresources/layouts/list";
+
+    public List<LayoutListItem> listLayouts() {
+
+        List<LayoutListItem> result = new ArrayList<LayoutListItem>();
+        HttpClient hc = new DefaultHttpClient();
+        BasicHttpRequest request = new BasicHttpRequest("GET", listURI);
+        InputStream is = null;
+        try {
+            HttpResponse response = hc.execute(host, request);
+            int status = response.getStatusLine().getStatusCode();
+            if (status == 200) {
+                String s = getStringFromResponse(response);
+                JSONArray list = new JSONArray(s);
+                for (int i = 0; i < list.length(); i++) {
+                    JSONObject o = list.getJSONObject(i);
+                    LayoutListItem item = LayoutListItem.parse(o);
+                    result.add(item);
+                }
+            } else {
+                Log.e("listLayouts", "Unexpected response status code:" + status);
+            }
+        } catch (IOException e) {
+            Log.e("listLayouts", "Failed to execute HTTP request", e);
+        } catch (JSONException e) {
+            Log.e("listLayouts", "Failed to create JSONArray", e);
+        }
+
+        return result;
+    }
+
+    public void saveLayout(int id) {
+        List<LayoutListItem> result = new ArrayList<LayoutListItem>();
+        HttpClient hc = new DefaultHttpClient();
+        BasicHttpRequest request = new BasicHttpRequest("GET", getLayoutURI);
+        FileWriter fr = null;
+        try {
+            HttpResponse response = hc.execute(host, request);
+            int status = response.getStatusLine().getStatusCode();
+            if (status == 200) {
+                String s = getStringFromResponse(response);
+                JSONObject jsonObject = new JSONObject(s);
+
+                Object o = jsonObject.get(NAME);
+                String name = o != JSONObject.NULL ? o.toString() : null;
+                o = jsonObject.get(TEXT);
+                String text = o != JSONObject.NULL ? o.toString() : null;
+
+                FileManager.saveToFile(name, text);
+
+            } else {
+                Log.e("saveLayout", "Unexpected response status code:" + status);
+            }
+        } catch (IOException e) {
+            Log.e("saveLayout", "Failed to execute HTTP request", e);
+        } catch (JSONException e) {
+            Log.e("saveLayout", "Failed to parse JSONObject", e);
+        } finally {
+            if (fr != null) {
+                try {
+                    fr.close();
+                } catch (IOException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
+            }
+        }
+    }
+
+    private String getStringFromResponse(HttpResponse response) {
+        String result = null;
+        InputStream is = null;
+        try {
+            is = response.getEntity().getContent();
+            long size = is.available();
+            byte[] b = new byte[(int) size];
+            is.read(b);
+            result = new String(b);
+        } catch (IOException e) {
+            Log.e("getStringFromResponse", "Failed to get String from request", e);
+        } finally {
+            if (is != null) {
+                try {
+                    is.close();
+                } catch (IOException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
+            }
+        }
+        return result;
+    }
+}

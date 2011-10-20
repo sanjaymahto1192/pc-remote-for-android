@@ -14,11 +14,11 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 import hu.za.pc_remote.R;
+import hu.za.pc_remote.RCLayoutsManagement.FileManager;
 import hu.za.pc_remote.common.RCAction;
 import hu.za.pc_remote.transport.ConnectionHandlingService;
 import hu.za.pc_remote.ui.ConnectionSettings;
 import hu.za.pc_remote.ui.UIActivityBase;
-import hu.za.pc_remote.utils.StorageConstants;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
@@ -29,7 +29,6 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static hu.za.pc_remote.utils.StorageConstants.APP_ROOT_DIR;
 
 
 /**
@@ -102,15 +101,7 @@ public class RCBuilder extends UIActivityBase {
             Log.i("getViews", "Storage avaliable");
             BufferedReader br = null;
             try {
-                FileReader fr = new FileReader(
-                        new StringBuilder(Environment.getExternalStorageDirectory().getPath())
-                                .append(File.separator)
-                                .append(APP_ROOT_DIR)
-                                .append(File.separator)
-                                .append("file")
-                                .toString());
-
-
+                FileReader fr = FileManager.getReader("file");
                 SAXParserFactory spf = SAXParserFactory.newInstance();
                 SAXParser sp = spf.newSAXParser();
                 XMLReader xr = sp.getXMLReader();

@@ -23,8 +23,6 @@ import java.util.UUID;
 
 import android.os.Handler;
 
-import java.util.logging.LogRecord;
-
 /**
  * Created by IntelliJ IDEA.
  * User: Andor
@@ -124,7 +122,7 @@ public class ConnectionSettings extends UIActivityBase {
         setContentView(R.layout.connectlayout);
 
         ListView listView = (ListView) findViewById(R.id.devicelist);
-        mDevicesAdapter = new ArrayAdapter(this, R.layout.devicelistitem);
+        mDevicesAdapter = new ArrayAdapter(this, R.layout.simplelistitem);
         listView.setAdapter(mDevicesAdapter);
         listView.setOnItemClickListener(mDeviceClickListener);
 
