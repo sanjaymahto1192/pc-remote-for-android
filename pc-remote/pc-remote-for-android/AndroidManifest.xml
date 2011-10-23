@@ -21,7 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.RCBuilder.RCBuilder"/>
-        <activity android:name=".ui.LayoutDownloader"/>
+        <activity android:name=".ui.RCLayouts.LayoutDownloader"/>
+        <activity android:name=".ui.RCLayouts.LayoutManager"/>
         <service android:name=".transport.ConnectionHandlingService"/>
     </application>
 </manifest>

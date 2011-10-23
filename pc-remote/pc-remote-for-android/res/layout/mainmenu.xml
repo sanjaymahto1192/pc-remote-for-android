@@ -12,7 +12,11 @@
             android:layout_height="wrap_content"
             android:layout_width="fill_parent"
             android:text="@string/touchpadButtonText"/>
-        <Button android:id="@id/exitButton"
+        <Button android:id="@id/layoutsMenuButton"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:text="@string/layoutsMenuButtonText"/>
+    <Button android:id="@id/exitButton"
             android:layout_height="wrap_content"
             android:layout_width="fill_parent"
             android:text="@string/exitButtonText"/>

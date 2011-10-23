@@ -11,7 +11,7 @@ import org.codehaus.jettison.json.JSONObject;
  * Time: 10:51 PM
  * To change this template use File | Settings | File Templates.
  */
-public class ListItem {
+public class LayoutListItem {
     private int id;
     private String name;
 

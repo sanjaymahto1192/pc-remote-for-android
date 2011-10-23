@@ -1,11 +1,9 @@
 package hu.za.pc_remote.jersey_webapp;
 
-import com.mysql.jdbc.NotImplemented;
 import hu.za.pc_remote.common.QueryParamConstants;
 import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import javax.ws.rs.*;
 import java.util.List;
@@ -27,8 +25,8 @@ public class LayoutService {
     @Path("/list")
     public JSONArray getIt() throws JSONException {
         JSONArray result = new JSONArray();
-        List<ListItem> items = DAO.getLayouts();
-        for (ListItem item : items) {
+        List<LayoutListItem> items = DAO.getLayouts();
+        for (LayoutListItem item : items) {
             result.put(item.toJSON());
         }
         return result;

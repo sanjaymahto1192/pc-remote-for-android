@@ -3,12 +3,11 @@ package hu.za.pc_remote.RCLayoutsManagement;
 import android.os.Environment;
 import android.os.Handler;
 import android.util.Log;
-import org.apache.http.HttpHost;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpResponse;
+import org.apache.http.*;
 import org.apache.http.client.HttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicHttpRequest;
+import org.apache.http.protocol.HTTP;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -17,6 +16,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static hu.za.pc_remote.common.LayoutJSONConstants.ID;
 import static hu.za.pc_remote.common.LayoutJSONConstants.NAME;
 import static hu.za.pc_remote.common.LayoutJSONConstants.TEXT;
 
@@ -29,9 +29,13 @@ import static hu.za.pc_remote.common.LayoutJSONConstants.TEXT;
  */
 public class NetworkManager {
 
-    private HttpHost host = new HttpHost("http://192.168.1.100", 8080);
+    private HttpHost host;
     private static final String getLayoutURI = "/jersey-webapp/webresources/layouts?id=";
     private static final String listURI = "/jersey-webapp/webresources/layouts/list";
+
+    public NetworkManager(String hostUrl) {
+        host = new HttpHost(hostUrl, 8080);
+    }
 
     public List<LayoutListItem> listLayouts() {
 
@@ -43,12 +47,15 @@ public class NetworkManager {
             HttpResponse response = hc.execute(host, request);
             int status = response.getStatusLine().getStatusCode();
             if (status == 200) {
+                List<LayoutListItem> layouts = FileManager.listFiles();
                 String s = getStringFromResponse(response);
                 JSONArray list = new JSONArray(s);
                 for (int i = 0; i < list.length(); i++) {
                     JSONObject o = list.getJSONObject(i);
                     LayoutListItem item = LayoutListItem.parse(o);
-                    result.add(item);
+                    if (!layouts.contains(item)) {
+                        result.add(item);
+                    }
                 }
             } else {
                 Log.e("listLayouts", "Unexpected response status code:" + status);
@@ -63,9 +70,8 @@ public class NetworkManager {
     }
 
     public void saveLayout(int id) {
-        List<LayoutListItem> result = new ArrayList<LayoutListItem>();
         HttpClient hc = new DefaultHttpClient();
-        BasicHttpRequest request = new BasicHttpRequest("GET", getLayoutURI);
+        BasicHttpRequest request = new BasicHttpRequest("GET", getLayoutURI + id);
         FileWriter fr = null;
         try {
             HttpResponse response = hc.execute(host, request);
@@ -79,7 +85,7 @@ public class NetworkManager {
                 o = jsonObject.get(TEXT);
                 String text = o != JSONObject.NULL ? o.toString() : null;
 
-                FileManager.saveToFile(name, text);
+                FileManager.saveToFile(name, id, text);
 
             } else {
                 Log.e("saveLayout", "Unexpected response status code:" + status);
@@ -100,14 +106,25 @@ public class NetworkManager {
     }
 
     private String getStringFromResponse(HttpResponse response) {
-        String result = null;
+        StringBuilder result = new StringBuilder();
         InputStream is = null;
+        InputStreamReader reader = null;
         try {
             is = response.getEntity().getContent();
-            long size = is.available();
-            byte[] b = new byte[(int) size];
-            is.read(b);
-            result = new String(b);
+
+            String charset = getContentCharSet(response.getEntity());
+            if (charset == null)
+                charset = HTTP.DEFAULT_CONTENT_CHARSET;
+
+            reader = new InputStreamReader(is, charset);
+
+            char[] tmp = new char[1024];
+            int l;
+            while ((l = reader.read(tmp)) != -1) {
+                result.append(tmp, 0, l);
+            }
+
+
         } catch (IOException e) {
             Log.e("getStringFromResponse", "Failed to get String from request", e);
         } finally {
@@ -117,8 +134,34 @@ public class NetworkManager {
                 } catch (IOException e) {
                     e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
                 }
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
             }
         }
-        return result;
+        return result.toString();
+    }
+
+    private String getContentCharSet(final HttpEntity entity) {
+
+        if (entity == null) {
+            throw new IllegalArgumentException("HTTP entity may not be null");
+        }
+
+        String charset = null;
+
+        if (entity.getContentType() != null) {
+            HeaderElement values[] = entity.getContentType().getElements();
+            if (values.length > 0) {
+                NameValuePair param = values[0].getParameterByName("charset");
+                if (param != null) {
+                    charset = param.getValue();
+                }
+            }
+        }
+        return charset;
+
     }
 }

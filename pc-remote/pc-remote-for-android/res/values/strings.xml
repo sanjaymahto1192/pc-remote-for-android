@@ -8,4 +8,7 @@
     <string name="disconnectButtonText">Disconnect</string>
     <string name="loading">Loading...</string>
     <string name="exitButtonText">Exit</string>
+    <string name="go">Go</string>
+    <string name="defaultUrl">192.168.1.100</string>
+    <string name="layoutsMenuButtonText">Layouts</string>
 </resources>

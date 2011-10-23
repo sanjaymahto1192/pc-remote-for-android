@@ -1,15 +1,14 @@
 package hu.za.pc_remote.ui;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import hu.za.pc_remote.HelloActivity;
 import hu.za.pc_remote.R;
 import hu.za.pc_remote.transport.ConnectionHandlingService;
 import hu.za.pc_remote.ui.RCBuilder.RCBuilder;
+import hu.za.pc_remote.ui.RCLayouts.LayoutDownloader;
 
 /**
  * Created by IntelliJ IDEA.
@@ -29,14 +28,17 @@ public class MainMenu extends Activity {
 
         setContentView(R.layout.mainmenu);
 
-        Button button = (Button)findViewById(R.id.connSettingsButton);
+        Button button = (Button) findViewById(R.id.connSettingsButton);
         button.setOnClickListener(new MainMenuEntry(ConnectionSettings.class));
 
-        button = (Button)findViewById(R.id.touchpadButton);
+        button = (Button) findViewById(R.id.touchpadButton);
         button.setOnClickListener(new MainMenuEntry(RCBuilder.class));
 
-        button = (Button)findViewById(R.id.exitButton);
-        button.setOnClickListener(new View.OnClickListener(){
+        button = (Button) findViewById(R.id.layoutsMenuButton);
+        button.setOnClickListener(new MainMenuEntry(LayoutDownloader.class));
+
+        button = (Button) findViewById(R.id.exitButton);
+        button.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
                 stopService(i);

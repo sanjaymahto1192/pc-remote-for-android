@@ -1,19 +1,20 @@
-package hu.za.pc_remote.ui;
+package hu.za.pc_remote.ui.RCLayouts;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import hu.za.pc_remote.RCLayoutsManagement.LayoutListItem;
 
 /**
  * Created by IntelliJ IDEA.
  * User: Andor
- * Date: 10/20/11
- * Time: 9:22 PM
+ * Date: 10/23/11
+ * Time: 3:23 PM
  * To change this template use File | Settings | File Templates.
  */
-public class LayoutDownloader extends Activity {
+public class LayoutManager extends Activity {
 
-    private ArrayAdapter mFilesAdapter;
+    ArrayAdapter<LayoutListItem> adapter;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

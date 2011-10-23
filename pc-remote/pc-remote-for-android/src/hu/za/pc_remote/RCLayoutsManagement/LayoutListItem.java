@@ -39,4 +39,19 @@ public class LayoutListItem {
         result.name = o.getString(NAME);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        boolean  result = false;
+        if(o instanceof LayoutListItem){
+            LayoutListItem other = (LayoutListItem) o;
+            result = this.id == other.id && this.name.equals(other.name);
+        }
+        return result;
+    }
 }

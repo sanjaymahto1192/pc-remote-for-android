@@ -1,6 +1,5 @@
 package hu.za.pc_remote.jersey_webapp;
 
-import hu.za.pc_remote.common.LayoutJSONConstants;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 

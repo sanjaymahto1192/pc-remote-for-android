@@ -30,9 +30,9 @@ public class DAO {
     private static final String deleteLayoutQuery = "DELETE FROM layouts WHERE id = ?";
 
 
-    public static List<ListItem> getLayouts() {
+    public static List<LayoutListItem> getLayouts() {
 
-        List<ListItem> result = new ArrayList<ListItem>();
+        List<LayoutListItem> result = new ArrayList<LayoutListItem>();
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
@@ -42,7 +42,7 @@ public class DAO {
             resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
-                ListItem item = new ListItem();
+                LayoutListItem item = new LayoutListItem();
                 item.setId(resultSet.getInt("id"));
                 item.setName(resultSet.getString("name"));
                 result.add(item);
