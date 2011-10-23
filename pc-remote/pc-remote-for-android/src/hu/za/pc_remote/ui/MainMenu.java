@@ -9,6 +9,7 @@ import hu.za.pc_remote.R;
 import hu.za.pc_remote.transport.ConnectionHandlingService;
 import hu.za.pc_remote.ui.RCBuilder.RCBuilder;
 import hu.za.pc_remote.ui.RCLayouts.LayoutDownloader;
+import hu.za.pc_remote.ui.RCLayouts.LayoutManager;
 
 /**
  * Created by IntelliJ IDEA.
@@ -35,7 +36,7 @@ public class MainMenu extends Activity {
         button.setOnClickListener(new MainMenuEntry(RCBuilder.class));
 
         button = (Button) findViewById(R.id.layoutsMenuButton);
-        button.setOnClickListener(new MainMenuEntry(LayoutDownloader.class));
+        button.setOnClickListener(new MainMenuEntry(LayoutManager.class));
 
         button = (Button) findViewById(R.id.exitButton);
         button.setOnClickListener(new View.OnClickListener() {

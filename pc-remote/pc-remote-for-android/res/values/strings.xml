@@ -11,4 +11,9 @@
     <string name="go">Go</string>
     <string name="defaultUrl">192.168.1.100</string>
     <string name="layoutsMenuButtonText">Layouts</string>
+    <string name="NoReuslt">No result</string>
+    <string name="AddNewLayout">Add Layout</string>
+    <string name="deleteLayout">Delete</string>
+    <string name="layoutDeleted">Successfully deleted</string>
+    <string name="downloadSuccessful">Download Successful</string>
 </resources>

@@ -5,24 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="295b8dfe-30d8-490b-8e58-4a7d201005ff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pc-remote-for-android/res/layout/layoutdownloader.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutDownloader.java" />
-      <change type="DELETED" beforePath="C:\Users\Andor\diploma\git\pc-remote\pc-remote-for-android\src\hu\za\pc_remote\ui\LayoutDownloader.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Andor\diploma\git\pc-remote\jersey-webapp\src\main\java\hu\za\pc_remote\jersey_webapp\ListItem.java" afterPath="$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/LayoutListItem.java" />
-      <change type="MOVED" beforePath="C:\Users\Andor\diploma\git\pc-remote\pc-remote-for-android\src\hu\za\pc_remote\ui\LayoutDownloader.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pc-remote-for-android/res/layout/layoutmanager.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/DAO.java" afterPath="$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/DAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/Layout.java" afterPath="$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/Layout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/LayoutService.java" afterPath="$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/LayoutService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/AndroidManifest.xml" afterPath="$PROJECT_DIR$/pc-remote-for-android/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/gen/hu/za/pc_remote/R.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/gen/hu/za/pc_remote/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/res/layout/mainmenu.xml" afterPath="$PROJECT_DIR$/pc-remote-for-android/res/layout/mainmenu.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/res/layout/layoutdownloader.xml" afterPath="$PROJECT_DIR$/pc-remote-for-android/res/layout/layoutdownloader.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/res/values/ids.xml" afterPath="$PROJECT_DIR$/pc-remote-for-android/res/values/ids.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/res/values/strings.xml" afterPath="$PROJECT_DIR$/pc-remote-for-android/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/FileManager.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/FileManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/LayoutListItem.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/LayoutListItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/NetworkManager.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/NetworkManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/MainMenu.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/MainMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCBuilder.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutDownloader.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutDownloader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutManager.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutManager.java" />
     </list>
     <ignored path="pc-remote.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,19 +36,6 @@
   <component name="DebuggerManager">
     <line_breakpoints>
       <breakpoint url="file://$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/DAO.java" line="77" class="hu.za.pc_remote.jersey_webapp.DAO" package="hu.za.pc_remote.jersey_webapp">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/FileManager.java" line="20" class="hu.za.pc_remote.RCLayoutsManagement.FileManager" package="hu.za.pc_remote.RCLayoutsManagement">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -109,50 +89,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NetworkManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/NetworkManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jersey-webapp/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="53" selection-start="3602" selection-end="3602" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LayoutService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/LayoutService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="43" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Layout.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/Layout.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FileManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/FileManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="79" selection-start="2452" selection-end="2452" vertical-scroll-proportion="0.0">
+            <state line="56" column="0" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -163,7 +103,70 @@
       <file leaf-file-name="LayoutManager.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="41" selection-start="430" selection-end="430" vertical-scroll-proportion="0.24803591">
+            <state line="60" column="84" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.50341684">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RCBuilder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="103" column="58" selection-start="3579" selection-end="3579" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainMenu.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/MainMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="65" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layoutmanager.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/res/layout/layoutmanager.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="51" selection-start="644" selection-end="665" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layoutdownloader.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/res/layout/layoutdownloader.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="59" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainmenu.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/res/layout/mainmenu.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="26" selection-start="657" selection-end="665" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -172,17 +175,10 @@
       <file leaf-file-name="LayoutDownloader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutDownloader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="0" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LayoutListItem.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/LayoutListItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="22" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="65" column="74" selection-start="2295" selection-end="2295" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="class#RefreshListener#0;class#LayoutDownloader#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -201,21 +197,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/Layout.java" />
-        <option value="$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/DAO.java" />
         <option value="$PROJECT_DIR$/pc-remote-for-android/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/LayoutManager.java" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCBuilder.java" />
         <option value="$PROJECT_DIR$/pc-remote-for-android/res/values/ids.xml" />
         <option value="$PROJECT_DIR$/pc-remote-for-android/res/layout/mainmenu.xml" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/MainMenu.java" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/res/layout/layoutdownloader.xml" />
         <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/LayoutDownloader.java" />
         <option value="$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/LayoutService.java" />
         <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/LayoutListItem.java" />
         <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/NetworkManager.java" />
+        <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/MainMenu.java" />
         <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/FileManager.java" />
+        <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCBuilder.java" />
+        <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutDownloader.java" />
+        <option value="$PROJECT_DIR$/pc-remote-for-android/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/pc-remote-for-android/res/layout/layoutdownloader.xml" />
+        <option value="$PROJECT_DIR$/pc-remote-for-android/res/layout/layoutmanager.xml" />
         <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutManager.java" />
       </list>
     </option>
@@ -730,10 +726,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19315404" sideWeight="0.775641" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19315404" sideWeight="0.67094016" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17848411" sideWeight="0.775641" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17848411" sideWeight="0.67094016" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22435898" sideWeight="0.49755502" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3985043" sideWeight="0.49755502" order="11" side_tool="false" content_ui="tabs" />
@@ -768,7 +764,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="FileManager, and NetworkManager added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Layout saving and downloading works" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -785,6 +781,7 @@
     <MESSAGE value="jersey webapp project fixed (jetty:run works now)" />
     <MESSAGE value="jersey webapp CRUD works for layout resources" />
     <MESSAGE value="FileManager, and NetworkManager added" />
+    <MESSAGE value="Layout saving and downloading works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -794,63 +791,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/res/values/ids.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="49" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="43" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="68" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/res/layout/mainmenu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="55" selection-start="861" selection-end="861" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/DAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/Layout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jersey-webapp/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="53" selection-start="3602" selection-end="3602" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/LayoutListItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="22" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/android-sdk-windows/platforms/android-9/android.jar!/android/view/View.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/android-sdk-windows/platforms/android-9/android.jar!/android/os/Looper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="16" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0">
@@ -865,6 +805,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/NetworkManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/LayoutService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="43" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
@@ -874,32 +821,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutDownloader.java">
+    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/LayoutListItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0">
+        <state line="54" column="22" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/NetworkManager.java">
+    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="65" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/android-sdk-windows/platforms/android-9/android.jar!/android/app/Instrumentation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="16" selection-start="6399" selection-end="6399" vertical-scroll-proportion="0.33267328">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/res/layout/mainmenu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="58" selection-start="3579" selection-end="3579" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutDownloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="74" selection-start="2295" selection-end="2295" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="class#RefreshListener#0;class#LayoutDownloader#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/FileManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="79" selection-start="2452" selection-end="2452" vertical-scroll-proportion="0.0">
+        <state line="56" column="0" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="26" selection-start="657" selection-end="665" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/res/layout/layoutdownloader.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="59" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/res/layout/layoutmanager.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="51" selection-start="644" selection-end="665" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="41" selection-start="430" selection-end="430" vertical-scroll-proportion="0.24803591">
+        <state line="60" column="84" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.50341684">
           <folding />
         </state>
       </provider>

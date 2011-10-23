@@ -15,6 +15,10 @@ public final class R {
     }
     public static final class id {
         public static final int LayoutDownloaderListView=0x7f040009;
+        public static final int LayoutDownloaderNoNewTextView=0x7f04000f;
+        public static final int LayoutManagerAddNewButton=0x7f04000e;
+        public static final int LayoutManagerListView=0x7f04000d;
+        public static final int LayoutManagerNoResult=0x7f040010;
         public static final int UrlEditText=0x7f04000b;
         public static final int connSettingsButton=0x7f040003;
         public static final int connSettingsLinearLayout=0x7f040005;
@@ -32,19 +36,25 @@ public final class R {
         public static final int connectlayout=0x7f030000;
         public static final int disconnectlayout=0x7f030001;
         public static final int layoutdownloader=0x7f030002;
-        public static final int main=0x7f030003;
-        public static final int mainmenu=0x7f030004;
-        public static final int simplelistitem=0x7f030005;
+        public static final int layoutmanager=0x7f030003;
+        public static final int main=0x7f030004;
+        public static final int mainmenu=0x7f030005;
+        public static final int simplelistitem=0x7f030006;
     }
     public static final class string {
+        public static final int AddNewLayout=0x7f05000c;
+        public static final int NoReuslt=0x7f05000b;
         public static final int app_name=0x7f050000;
         public static final int connSettingsButtonText=0x7f050002;
         public static final int connectedText=0x7f050004;
         public static final int defaultUrl=0x7f050009;
+        public static final int deleteLayout=0x7f05000d;
         public static final int disconnectButtonText=0x7f050005;
+        public static final int downloadSuccessful=0x7f05000f;
         public static final int exitButtonText=0x7f050007;
         public static final int go=0x7f050008;
         public static final int hello=0x7f050001;
+        public static final int layoutDeleted=0x7f05000e;
         public static final int layoutsMenuButtonText=0x7f05000a;
         public static final int loading=0x7f050006;
         public static final int touchpadButtonText=0x7f050003;

@@ -1,6 +1,7 @@
 package hu.za.pc_remote.RCLayoutsManagement;
 
 import android.os.Environment;
+import android.text.StaticLayout;
 import android.util.Log;
 
 import java.io.*;
@@ -20,10 +21,7 @@ public class FileManager {
     public static void saveToFile(String name, int id, String xml) throws IOException {
         String fileName = String.format("%s_%d", name, id);
 
-        String appRootDir = new StringBuilder(Environment.getExternalStorageDirectory().getPath())
-                .append(File.separator)
-                .append(APP_ROOT_DIR)
-                .toString();
+        String appRootDir = getAppRootDir();
 
         String path = new StringBuilder(appRootDir)
                 .append(File.separator)
@@ -54,15 +52,26 @@ public class FileManager {
         }
     }
 
-    public static FileReader getReader(String fileName) {
+    public static void deleteFile(LayoutListItem item){
+
+        File file = new File(
+                    new StringBuilder(getAppRootDir())
+                            .append(File.separator)
+                            .append(getFileName(item))
+                            .toString());
+
+        if(file.exists()){
+            file.delete();
+        }
+    }
+
+    public static FileReader getReader(LayoutListItem item) {
         FileReader fr = null;
         try {
             fr = new FileReader(
-                    new StringBuilder(Environment.getExternalStorageDirectory().getPath())
+                    new StringBuilder(getAppRootDir())
                             .append(File.separator)
-                            .append(APP_ROOT_DIR)
-                            .append(File.separator)
-                            .append(fileName)
+                            .append(getFileName(item))
                             .toString());
         } catch (FileNotFoundException e) {
             Log.e("getReader", "Failed to get FileReader", e);
@@ -71,11 +80,7 @@ public class FileManager {
     }
 
     public static List<LayoutListItem> listFiles() {
-        File root = new File(
-                new StringBuilder(Environment.getExternalStorageDirectory().getPath())
-                        .append(File.separator)
-                        .append(APP_ROOT_DIR).toString()
-        );
+        File root = new File(getAppRootDir());
 
         List<LayoutListItem> result = new ArrayList<LayoutListItem>();
         if (root != null && root.exists()){
@@ -92,5 +97,15 @@ public class FileManager {
             }
         }
         return result;
+    }
+
+    private static String getFileName(LayoutListItem item){
+        return String.format("%s_%d", item.getName(), item.getId());
+    }
+
+    private static String getAppRootDir(){
+        return new StringBuilder(Environment.getExternalStorageDirectory().getPath())
+                        .append(File.separator)
+                        .append(APP_ROOT_DIR).toString();
     }
 }

@@ -8,8 +8,11 @@ import android.widget.*;
 import hu.za.pc_remote.R;
 import hu.za.pc_remote.RCLayoutsManagement.LayoutListItem;
 import hu.za.pc_remote.RCLayoutsManagement.NetworkManager;
+import org.w3c.dom.Text;
 
 import java.util.List;
+
+import static android.view.View.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -21,6 +24,7 @@ import java.util.List;
 public class LayoutDownloader extends Activity {
 
     private ListView listView = null;
+    private TextView empty = null;
     ArrayAdapter<LayoutListItem> adapter = null;
     NetworkManager networkManager = null;
 
@@ -30,6 +34,7 @@ public class LayoutDownloader extends Activity {
 
         adapter = new ArrayAdapter<LayoutListItem>(LayoutDownloader.this, R.layout.simplelistitem);
 
+        empty = (TextView)findViewById(R.id.LayoutDownloaderNoNewTextView);
         listView = (ListView) findViewById(R.id.LayoutDownloaderListView);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new SaveClickListener());
@@ -58,6 +63,7 @@ public class LayoutDownloader extends Activity {
                                         adapter.add(item);
                                     }
                                 dialog.dismiss();
+                                empty.setVisibility(adapter.getCount()==0? VISIBLE: INVISIBLE);
                             }
                         }
                 );
@@ -79,10 +85,26 @@ public class LayoutDownloader extends Activity {
     public class SaveClickListener implements ListView.OnItemClickListener {
 
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-            LayoutListItem item = adapter.getItem(i);
+            final LayoutListItem item = adapter.getItem(i);
 
             if (networkManager != null) {
-                networkManager.saveLayout(item.getId());
+                new Thread() {
+                    @Override
+                    public void run() {
+                        networkManager.saveLayout(item.getId());
+                        runOnUiThread(
+                                new Runnable() {
+                                    public void run() {
+                                        refreshAdapter();
+                                        Toast.makeText(
+                                                LayoutDownloader.this,
+                                                getString(R.string.downloadSuccessful),
+                                                Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                        );
+                    }
+                }.start();
             }
         }
     }

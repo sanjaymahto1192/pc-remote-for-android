@@ -101,7 +101,7 @@ public class RCBuilder extends UIActivityBase {
             Log.i("getViews", "Storage avaliable");
             BufferedReader br = null;
             try {
-                FileReader fr = FileManager.getReader("file");
+                FileReader fr = FileManager.getReader(null);
                 SAXParserFactory spf = SAXParserFactory.newInstance();
                 SAXParser sp = spf.newSAXParser();
                 XMLReader xr = sp.getXMLReader();

@@ -12,4 +12,8 @@
     <item name="refreshLayoutsButton" type="id"/>
     <item name="UrlEditText" type="id"/>
     <item name="layoutsMenuButton" type="id"/>
+    <item name="LayoutManagerListView" type="id"/>
+    <item name="LayoutManagerAddNewButton" type="id"/>
+    <item name="LayoutDownloaderNoNewTextView" type="id"/>
+    <item name="LayoutManagerNoResult" type="id"/>
 </resources>
