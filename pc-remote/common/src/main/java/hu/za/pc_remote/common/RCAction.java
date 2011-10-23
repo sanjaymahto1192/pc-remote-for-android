@@ -36,7 +36,7 @@ public class RCAction implements Serializable {
     }
 
     public Type type;
-    public Serializable[] arguments; //TODO int is not good, x and y coordinatas are coming in float
+    public Serializable[] arguments;
 
     public String toString(){
         StringBuilder sb = new StringBuilder("RCAction type:").append(type.toString()).append(" args:");

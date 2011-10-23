@@ -11,6 +11,7 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderAdapter;
 import android.util.Log;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +29,7 @@ public class RCXmlParser extends XMLReaderAdapter {
     private static final String tableTag = "table";
     private static final String rowTag = "row";
     private static final String buttonTag = "button";
+    private static final String buttonText = "text";
     private static final String actionTypeAttr = "actiontype";
     private static final String touchPadTag = "touchpad";
 
@@ -62,11 +64,12 @@ public class RCXmlParser extends XMLReaderAdapter {
                 String s = atts.getValue(actionTypeAttr);
                 RCAction action = new RCAction();
                 action.type = RCAction.Type.valueOf(s);
-                float[] attribs = new float[action.type.getNumberOfArgs()];
-                for (int i = 0; i < attribs.length; i++) {
-                    attribs[i] = Float.parseFloat(atts.getValue(i + 1));
+                action.arguments = new Serializable[action.type.getNumberOfArgs()];
+                for (int i = 0; i < action.arguments.length; i++) {
+                    action.arguments[i] = Integer.parseInt(atts.getValue(i + 2));
                 }
                 RCButton button = new RCButton(action, context);
+                button.setText(atts.getValue(buttonText));
                 row.addView(button);
             }
         } else if (localName.equals(touchPadTag)) {

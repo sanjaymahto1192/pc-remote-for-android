@@ -5,23 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="295b8dfe-30d8-490b-8e58-4a7d201005ff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_bluecove_bluecove_2_1_1_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pc-remote-for-android/res/layout/selectlayout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/SelectLayout.java" />
-      <change type="DELETED" beforePath="C:\Users\Andor\diploma\git\pc-remote\.idea\libraries\Maven__common_common_1_0.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml-generator/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/XmlGenerator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Button.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Element.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Layout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Row.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Table.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Touchpad.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml-generator/xml-generator.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/common.iml" afterPath="$PROJECT_DIR$/common/common.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop-agent/desktop-agent.iml" afterPath="$PROJECT_DIR$/desktop-agent/desktop-agent.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jersey-webapp/jersey-webapp.iml" afterPath="$PROJECT_DIR$/jersey-webapp/jersey-webapp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/AndroidManifest.xml" afterPath="$PROJECT_DIR$/pc-remote-for-android/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/gen/hu/za/pc_remote/R.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/gen/hu/za/pc_remote/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/res/values/ids.xml" afterPath="$PROJECT_DIR$/pc-remote-for-android/res/values/ids.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/LayoutListItem.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/LayoutListItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/MainMenu.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/MainMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCBuilder.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutManager.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote.iml" afterPath="$PROJECT_DIR$/pc-remote.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/src/main/java/hu/za/pc_remote/common/RCAction.java" afterPath="$PROJECT_DIR$/common/src/main/java/hu/za/pc_remote/common/RCAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCXmlParser.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCXmlParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="pc-remote.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -134,66 +131,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LayoutManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutManager.java">
+      <file leaf-file-name="RCXmlParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCXmlParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="0" selection-start="1696" selection-end="2380" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SelectLayout.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/SelectLayout.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="25" selection-start="718" selection-end="730" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="method#refreshAdapter#0;class#SelectLayout#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainMenu.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/MainMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="64" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BTManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="54" selection-start="421" selection-end="421" vertical-scroll-proportion="0.0">
+            <state line="71" column="58" selection-start="2387" selection-end="2387" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/desktop-agent/pom.xml">
+        <entry file="file://$PROJECT_DIR$/xml-generator/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="44" selection-start="1495" selection-end="1495" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectionSettings.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/ConnectionSettings.java">
+      <file leaf-file-name="XmlGenerator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/XmlGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="157" column="0" selection-start="5332" selection-end="5332" vertical-scroll-proportion="0.3131313">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/FileManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="0" selection-start="2570" selection-end="2570" vertical-scroll-proportion="0.0">
+            <state line="83" column="27" selection-start="2842" selection-end="2842" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -201,19 +160,72 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LayoutDownloader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutDownloader.java">
+      <file leaf-file-name="Layout.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Layout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="0" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.0">
+            <state line="14" column="16" selection-start="388" selection-end="388" vertical-scroll-proportion="0.34948605">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Button.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Button.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="15" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Table.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Table.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="35" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Touchpad.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Touchpad.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="15" selection-start="263" selection-end="263" vertical-scroll-proportion="-7.48">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NetworkManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/NetworkManager.java">
+      <file leaf-file-name="Row.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Row.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="89" selection-start="2916" selection-end="2916" vertical-scroll-proportion="0.0">
+            <state line="12" column="18" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Element.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Element.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="15" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RCAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/hu/za/pc_remote/common/RCAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="36" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -233,22 +245,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pc-remote-for-android/res/values/ids.xml" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/res/layout/mainmenu.xml" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/LayoutDownloader.java" />
-        <option value="$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/LayoutService.java" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/NetworkManager.java" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/FileManager.java" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutDownloader.java" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/res/layout/layoutdownloader.xml" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/res/layout/layoutmanager.xml" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCBuilder.java" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/LayoutListItem.java" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/res/layout/selectlayout.xml" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutManager.java" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/SelectLayout.java" />
-        <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/MainMenu.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/hu/za/pc_remote/common/RCAction.java" />
+        <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCXmlParser.java" />
+        <option value="$PROJECT_DIR$/xml-generator/src/main/java/LayoutBean.java" />
+        <option value="$PROJECT_DIR$/xml-generator/src/main/java/ButtonBean.java" />
+        <option value="$PROJECT_DIR$/xml-generator/src/main/java/Row.java" />
+        <option value="$PROJECT_DIR$/xml-generator/src/main/java/Element.java" />
+        <option value="$PROJECT_DIR$/xml-generator/src/main/java/Table.java" />
+        <option value="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/Table.java" />
+        <option value="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Touchpad.java" />
+        <option value="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Element.java" />
+        <option value="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Row.java" />
+        <option value="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Table.java" />
+        <option value="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/LayoutBean.java" />
+        <option value="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/XmlGenerator.java" />
+        <option value="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Button.java" />
+        <option value="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Layout.java" />
       </list>
     </option>
   </component>
@@ -304,16 +316,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -324,18 +326,18 @@
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
-  <component name="RunManager" selected="Android Application.pc-remote">
+  <component name="RunManager" selected="Application.generate xml">
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings">
@@ -537,6 +539,22 @@
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="generate xml" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="hu.za.pc_remote.xmlgeneration.XmlGenerator" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="xml-generator" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -780,14 +798,15 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="7">
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Android Application.pc-remote" />
       <item index="1" class="java.lang.String" itemvalue="Application.run desktop agent" />
-      <item index="2" class="java.lang.String" itemvalue="Maven.jersey jetty:run" />
-      <item index="3" class="java.lang.String" itemvalue="Maven.jersey package" />
-      <item index="4" class="java.lang.String" itemvalue="Maven.common clean install" />
-      <item index="5" class="java.lang.String" itemvalue="Maven.parent clean install" />
-      <item index="6" class="java.lang.String" itemvalue="Maven.desktop agent clean install" />
+      <item index="2" class="java.lang.String" itemvalue="Application.generate xml" />
+      <item index="3" class="java.lang.String" itemvalue="Maven.jersey jetty:run" />
+      <item index="4" class="java.lang.String" itemvalue="Maven.jersey package" />
+      <item index="5" class="java.lang.String" itemvalue="Maven.common clean install" />
+      <item index="6" class="java.lang.String" itemvalue="Maven.parent clean install" />
+      <item index="7" class="java.lang.String" itemvalue="Maven.desktop agent clean install" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -856,16 +875,16 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19315404" sideWeight="0.60149574" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.383547" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17848411" sideWeight="0.60149574" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17848411" sideWeight="0.775641" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22435898" sideWeight="0.49755502" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.383547" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22435898" sideWeight="0.49755502" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3985043" sideWeight="0.49755502" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -894,7 +913,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="LayoutManagement added (listing, download new, delete)" />
+    <option name="LAST_COMMIT_MESSAGE" value="SelectLayout works" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -913,6 +932,7 @@
     <MESSAGE value="FileManager, and NetworkManager added" />
     <MESSAGE value="Layout saving and downloading works" />
     <MESSAGE value="LayoutManagement added (listing, download new, delete)" />
+    <MESSAGE value="SelectLayout works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -922,78 +942,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="35" selection-start="2360" selection-end="2360" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCXmlParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="24" selection-start="586" selection-end="597" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/res/layout/layoutmanager.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="40" selection-end="830" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/res/layout/selectlayout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="50" selection-start="462" selection-end="462" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/TouchPad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/RCLayoutsManagement/LayoutListItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="42" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1696" selection-end="2380" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/SelectLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="25" selection-start="718" selection-end="730" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="method#refreshAdapter#0;class#SelectLayout#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="64" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="54" selection-start="421" selection-end="421" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/desktop-agent/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="44" selection-start="1495" selection-end="1495" vertical-scroll-proportion="0.0">
@@ -1007,13 +955,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutDownloader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1033,8 +974,95 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/ConnectionSettings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="0" selection-start="5332" selection-end="5332" vertical-scroll-proportion="0.3131313">
+        <state line="157" column="0" selection-start="5332" selection-end="5332" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCLayouts/LayoutDownloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="0" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.18921892">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/hu/za/pc_remote/common/RCAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="36" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml-generator/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCXmlParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="58" selection-start="2387" selection-end="2387" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Touchpad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="15" selection-start="263" selection-end="263" vertical-scroll-proportion="-7.48">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Element.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="15" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/XmlGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="27" selection-start="2842" selection-end="2842" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Table.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="35" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Row.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="18" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Button.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="15" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Layout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="16" selection-start="388" selection-end="388" vertical-scroll-proportion="0.34948605">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1090,11 +1118,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>desktop-agent</last-edited>
+          <last-edited>xml-generator</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
