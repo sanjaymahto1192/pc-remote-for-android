@@ -4,6 +4,8 @@ import hu.za.pc_remote.common.ListItemJSONConstants;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
+
 import static hu.za.pc_remote.common.ListItemJSONConstants.*;
 
 /**
@@ -13,7 +15,7 @@ import static hu.za.pc_remote.common.ListItemJSONConstants.*;
  * Time: 9:02 AM
  * To change this template use File | Settings | File Templates.
  */
-public class LayoutListItem {
+public class LayoutListItem implements Serializable{
     private int id;
     private String name;
 

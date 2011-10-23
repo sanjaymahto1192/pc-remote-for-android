@@ -23,6 +23,7 @@
         <activity android:name=".ui.RCBuilder.RCBuilder"/>
         <activity android:name=".ui.RCLayouts.LayoutDownloader"/>
         <activity android:name=".ui.RCLayouts.LayoutManager"/>
+        <activity android:name=".ui.RCBuilder.SelectLayout"/>
         <service android:name=".transport.ConnectionHandlingService"/>
     </application>
 </manifest>

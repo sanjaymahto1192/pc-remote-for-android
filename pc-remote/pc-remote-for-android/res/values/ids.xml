@@ -16,4 +16,6 @@
     <item name="LayoutManagerAddNewButton" type="id"/>
     <item name="LayoutDownloaderNoNewTextView" type="id"/>
     <item name="LayoutManagerNoResult" type="id"/>
+    <item name="SelectLayoutListView" type="id"/>
+    <item name="SelectLayoutNoResult" type="id"/>
 </resources>

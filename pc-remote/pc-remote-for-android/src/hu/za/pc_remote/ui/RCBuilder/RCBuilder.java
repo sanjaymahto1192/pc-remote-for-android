@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 import hu.za.pc_remote.R;
 import hu.za.pc_remote.RCLayoutsManagement.FileManager;
+import hu.za.pc_remote.RCLayoutsManagement.LayoutListItem;
 import hu.za.pc_remote.common.RCAction;
 import hu.za.pc_remote.transport.ConnectionHandlingService;
 import hu.za.pc_remote.ui.ConnectionSettings;
@@ -30,7 +31,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
 /**
  * Created by IntelliJ IDEA.
  * User: Andor
@@ -39,6 +39,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class RCBuilder extends UIActivityBase {
+    public static final String LayoutItemKey = "layoutItem";
 
     private ServiceConnection mConnection = new ServiceConnection() {
         public void onServiceConnected(ComponentName className, IBinder service) {
@@ -59,25 +60,21 @@ public class RCBuilder extends UIActivityBase {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Intent starterIntent = getIntent();
+        LayoutListItem item = (LayoutListItem) starterIntent.getSerializableExtra(LayoutItemKey);
+
+        if(item == null)
+            finish();
+
         bindService(new Intent(this, ConnectionHandlingService.class), mConnection, Context.BIND_AUTO_CREATE);
 
-        List<View> views = getViews();
-        Log.i("Views", String.format("views:%d", views.size()));
-        LinearLayout layout = new LinearLayout(this);
-        for (View v : views) {
-            layout.addView(v);
-        }
-        //View.OnKeyListener keyListener = new RCKeyListener(this);
-        TouchPad touchPad = new TouchPad(this);
-        layout.addView(touchPad);
-/*        layout.setOnKeyListener(keyListener);
-        touchPad.setOnKeyListener(keyListener);*/
-        setContentView(layout);
+        setContentView(getView(item));
     }
 
-    public List<View> getViews() {
+    public View getView(LayoutListItem item) {
         Log.i("getViews", "Started");
-        List<View> views = new ArrayList<View>();
+
+        View result = null;
 
         boolean storageAvailable = false;
         boolean storageWritable = false;
@@ -101,11 +98,13 @@ public class RCBuilder extends UIActivityBase {
             Log.i("getViews", "Storage avaliable");
             BufferedReader br = null;
             try {
-                FileReader fr = FileManager.getReader(null);
+                FileReader fr = FileManager.getReader(item);
                 SAXParserFactory spf = SAXParserFactory.newInstance();
                 SAXParser sp = spf.newSAXParser();
                 XMLReader xr = sp.getXMLReader();
-                Xml.parse(fr, new RCXmlParser(xr, this));
+                RCXmlParser parser = new RCXmlParser(xr, this);
+                Xml.parse(fr, parser);
+                result = parser.getResult();
 
             } catch (IOException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -123,6 +122,6 @@ public class RCBuilder extends UIActivityBase {
                 }
             }
         }
-        return views;
+        return result;
     }
 }

@@ -19,6 +19,8 @@ public final class R {
         public static final int LayoutManagerAddNewButton=0x7f04000e;
         public static final int LayoutManagerListView=0x7f04000d;
         public static final int LayoutManagerNoResult=0x7f040010;
+        public static final int SelectLayoutListView=0x7f040011;
+        public static final int SelectLayoutNoResult=0x7f040012;
         public static final int UrlEditText=0x7f04000b;
         public static final int connSettingsButton=0x7f040003;
         public static final int connSettingsLinearLayout=0x7f040005;
@@ -39,7 +41,8 @@ public final class R {
         public static final int layoutmanager=0x7f030003;
         public static final int main=0x7f030004;
         public static final int mainmenu=0x7f030005;
-        public static final int simplelistitem=0x7f030006;
+        public static final int selectlayout=0x7f030006;
+        public static final int simplelistitem=0x7f030007;
     }
     public static final class string {
         public static final int AddNewLayout=0x7f05000c;

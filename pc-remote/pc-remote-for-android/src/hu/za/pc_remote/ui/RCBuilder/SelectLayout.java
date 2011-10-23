@@ -1,4 +1,4 @@
-package hu.za.pc_remote.ui.RCLayouts;
+package hu.za.pc_remote.ui.RCBuilder;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -10,42 +10,36 @@ import android.widget.*;
 import hu.za.pc_remote.R;
 import hu.za.pc_remote.RCLayoutsManagement.FileManager;
 import hu.za.pc_remote.RCLayoutsManagement.LayoutListItem;
+import hu.za.pc_remote.ui.RCLayouts.LayoutDownloader;
 
 import java.util.List;
 
-import static android.view.View.*;
+import static android.view.View.INVISIBLE;
+import static android.view.View.VISIBLE;
 
 /**
  * Created by IntelliJ IDEA.
  * User: Andor
  * Date: 10/23/11
- * Time: 3:23 PM
+ * Time: 8:03 PM
  * To change this template use File | Settings | File Templates.
  */
-public class LayoutManager extends Activity {
+public class SelectLayout extends Activity {
 
     private ArrayAdapter<LayoutListItem> adapter;
     private TextView empty;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layoutmanager);
+        setContentView(R.layout.selectlayout);
 
         adapter = new ArrayAdapter<LayoutListItem>(this, R.layout.simplelistitem);
 
-        empty = (TextView) findViewById(R.id.LayoutManagerNoResult);
+        empty = (TextView) findViewById(R.id.SelectLayoutNoResult);
 
-        ListView listView = (ListView) findViewById(R.id.LayoutManagerListView);
+        ListView listView = (ListView) findViewById(R.id.SelectLayoutListView);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new ItemClieckedListener());
-
-        Button button = (Button) findViewById(R.id.LayoutManagerAddNewButton);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent i = new Intent(LayoutManager.this, LayoutDownloader.class);
-                startActivity(i);
-            }
-        });
     }
 
     @Override
@@ -77,29 +71,9 @@ public class LayoutManager extends Activity {
     private class ItemClieckedListener implements ListView.OnItemClickListener {
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
             final LayoutListItem item = adapter.getItem(i);
-            AlertDialog.Builder builder = new AlertDialog.Builder(LayoutManager.this);
-            builder.setTitle(item.getName());
-            CharSequence[] options = {getString(R.string.deleteLayout)};
-            builder.setItems(options, new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    new Thread() {
-                        @Override
-                        public void run() {
-                            FileManager.deleteFile(item);
-                            runOnUiThread(
-                                    new Runnable() {
-                                        public void run() {
-                                            Toast.makeText(LayoutManager.this, getString(R.string.layoutDeleted), Toast.LENGTH_SHORT).show();
-                                            refreshAdapter();
-                                        }
-                                    }
-                            );
-                        }
-                    }.start();
-                }
-            });
-            AlertDialog alert = builder.create();
-            alert.show();
+            Intent starterIntent = new Intent(SelectLayout.this, RCBuilder.class);
+            starterIntent.putExtra(RCBuilder.LayoutItemKey, item);
+            startActivity(starterIntent);
         }
     }
 }

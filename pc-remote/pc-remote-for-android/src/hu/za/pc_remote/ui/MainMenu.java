@@ -8,6 +8,7 @@ import android.widget.Button;
 import hu.za.pc_remote.R;
 import hu.za.pc_remote.transport.ConnectionHandlingService;
 import hu.za.pc_remote.ui.RCBuilder.RCBuilder;
+import hu.za.pc_remote.ui.RCBuilder.SelectLayout;
 import hu.za.pc_remote.ui.RCLayouts.LayoutDownloader;
 import hu.za.pc_remote.ui.RCLayouts.LayoutManager;
 
@@ -33,7 +34,7 @@ public class MainMenu extends Activity {
         button.setOnClickListener(new MainMenuEntry(ConnectionSettings.class));
 
         button = (Button) findViewById(R.id.touchpadButton);
-        button.setOnClickListener(new MainMenuEntry(RCBuilder.class));
+        button.setOnClickListener(new MainMenuEntry(SelectLayout.class));
 
         button = (Button) findViewById(R.id.layoutsMenuButton);
         button.setOnClickListener(new MainMenuEntry(LayoutManager.class));
