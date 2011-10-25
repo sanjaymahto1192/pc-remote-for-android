@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TableRow;
+import hu.za.pc_remote.common.KeyCode;
 import hu.za.pc_remote.common.RCAction;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -30,6 +31,7 @@ public class RCXmlParser extends XMLReaderAdapter {
     private static final String rowTag = "row";
     private static final String buttonTag = "button";
     private static final String buttonText = "text";
+    private static final String buttonKeyCode = "key";
     private static final String actionTypeAttr = "actiontype";
     private static final String touchPadTag = "touchpad";
 
@@ -64,10 +66,9 @@ public class RCXmlParser extends XMLReaderAdapter {
                 String s = atts.getValue(actionTypeAttr);
                 RCAction action = new RCAction();
                 action.type = RCAction.Type.valueOf(s);
-                action.arguments = new Serializable[action.type.getNumberOfArgs()];
-                for (int i = 0; i < action.arguments.length; i++) {
-                    action.arguments[i] = Integer.parseInt(atts.getValue(i + 2));
-                }
+                action.arguments = new Serializable[1];
+                String key = atts.getValue(buttonKeyCode);
+                action.arguments[0] = KeyCode.valueOf(key);
                 RCButton button = new RCButton(action, context);
                 button.setText(atts.getValue(buttonText));
                 row.addView(button);

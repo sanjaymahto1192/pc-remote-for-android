@@ -33,6 +33,7 @@ public class BTManager extends Thread {
     StreamConnectionNotifier server = null;
     StreamConnection conn = null;
     ObjectInputStream inStream = null;
+    EventSender sender = new EventSender();
 
     public BTManager() {
         logger.debug("Setting device to be discoverable...");
@@ -95,7 +96,7 @@ public class BTManager extends Thread {
                 while (true) {
                     try {
                         RCAction a = (RCAction) inStream.readObject();
-
+                        sender.send(a);
                         logger.debug(a.toString());
 
                     } catch (IOException e) {

@@ -31,7 +31,7 @@ public class TouchPad extends SurfaceView implements SurfaceHolder.Callback {
 
     public TouchPad(Context context) {
         super(context);
-        this.context=context;
+        this.context = context;
 
         gestureDetector = new GestureDetector(new MyGestureListener());
         x = 100;
@@ -68,12 +68,12 @@ public class TouchPad extends SurfaceView implements SurfaceHolder.Callback {
             vx += velocityX;
             vy += velocityY;
 
-            Intent i = new Intent(ConnectionHandlingService.RC_INTENT_ACTION);
+ /*           Intent i = new Intent(ConnectionHandlingService.RC_INTENT_ACTION);
             RCAction extra = new RCAction();
             extra.type = RCAction.Type.MOUSE_MOVE;
-            extra.arguments = new Float[]{ new Float(0), new Float(0), velocityX, velocityY};
+            extra.arguments = new Float[]{new Float(0), new Float(0), velocityX, velocityY};
             i.putExtra(ConnectionHandlingService.INTENT_DATA_EXTRA_KEY, extra);
-            context.sendBroadcast(i);
+            context.sendBroadcast(i);*/
 
             return true;
         }
@@ -86,7 +86,7 @@ public class TouchPad extends SurfaceView implements SurfaceHolder.Callback {
             Intent i = new Intent(ConnectionHandlingService.RC_INTENT_ACTION);
             RCAction extra = new RCAction();
             extra.type = RCAction.Type.MOUSE_MOVE;
-            extra.arguments = new Float[]{dx, dy, new Float(0), new Float(0)};
+            extra.arguments = new Float[]{-dx, -dy, new Float(0), new Float(0)};
             i.putExtra(ConnectionHandlingService.INTENT_DATA_EXTRA_KEY, extra);
             context.sendBroadcast(i);
 
@@ -97,6 +97,19 @@ public class TouchPad extends SurfaceView implements SurfaceHolder.Callback {
         public boolean onDown(MotionEvent e) {
             x = e.getX();
             y = e.getY();
+
+            return true;
+        }
+
+        @Override
+        public boolean onSingleTapUp(MotionEvent e) {
+            Intent i = new Intent(ConnectionHandlingService.RC_INTENT_ACTION);
+            RCAction extra = new RCAction();
+            extra.type = RCAction.Type.MOUSE_CLICK;
+            extra.arguments = new Integer[]{new Integer(1)};
+            i.putExtra(ConnectionHandlingService.INTENT_DATA_EXTRA_KEY, extra);
+            context.sendBroadcast(i);
+
             return true;
         }
     }
