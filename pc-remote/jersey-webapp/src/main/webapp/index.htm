@@ -3,146 +3,142 @@
 <head>
     <title></title>
     <script type="text/javascript" language="javascript" src="scripts/jquery-1.4.1-vsdoc.js"></script>
+    <style type="text/css">
+        #menu ul
+        {
+            list-style:none;
+            float: left;
+        }
+        #menu li
+        {
+            float: left;
+            margin: 5px 5px 5px 5px;
+        }
+        #left
+        {
+            float: left; 
+            margin: 10px 50px 50px 50px;
+        }
+        #right
+        {
+            float: left;
+            margin: 10px 50px 50px 20px;
+        }
+    </style>
 </head>
 <body>
-    <p id="ptext">
-        <label for="text">
-            Text:</label>
-        <input id="text" name="text" type="text" />
-    </p>
-    <p>
-        <label for="type">
-            Type:</label>
-        <select id="type">
-            <option>Hello</option>
-            <option>Bello</option>
-        </select>
-    </p>
-    <a id="add" href="">Add new line</a>
-    <div id="main">
+    <div id="menu">
+        <ul>
+            <li><a href="index.htm">Edit</a></li>
+            <li><a href="EditLayout.htm">Add new</a></li>
+        </ul>
     </div>
-    <input id="btnSend" type="button" value="Send" />
-    <div id="list">
+    <br style="clear:both" />
+    <div id="left">
     </div>
-    <div id="puffer">
-        <table>
-        </table>
+    <div id="right">
+        <p>
+            <input id="name" type="text" /><input id="itemid" type="hidden" />
+        </p>
+        <p>
+            <textarea id="xml" rows="10" cols="60"></textarea>
+        </p>
+        <p>
+            <input id="btnSave" type="button" value="Save" />
+            <input id="btnDelete" type="button" value="Delete" />
+        </p>
     </div>
-    <script type="text/javascript">
-        function htmlEncode(value) {
-            return $('<div/>').text(value).html();
-        }
-
-        function htmlDecode(value) {
-            return $('<div/>').html(value).text();
-        }
-
-
-        var puffer = "<div id=\"puffer\"><table><table></div>";
-        var j = new Array();
-        i = 0;
-        $(document).ready(function () {
-
-//            $.get('http://localhost:8080/jersey-webapp/webresources/layouts/list', function (data) {
-//                for (z = 0; z < data.length; z++) {
-//                    var item = data[z];
-//                    $("#list").append("<p id=\"plist" + z + "\"><a id=\"alistitem" + z + "\"></a></p>");
-//                    var listitem = $("#alistitem" + z);
-//                    listitem.text(item.name).html();
-//                    listitem.click(function (event) {
-//                        alert(this.text);
-//                        event.preventDefault();
-//                    });
-//                }
-
-//            });
-
-            /////////////////////////////////////
-            // Disable not used elements by type
-            //
-            $("#type").change(function (event) {
-                if (this.value == "Bello") {
-                    $("#ptext").hide();
-                } else {
-                    $("#ptext").show();
-                }
-            });
-
-            //////////////
-            // Send button
-            //
-            $("#btnSend").click(function (event) {
-                var root = $('<rc />');
-                $("#main p").each(function (index, p) {
-                    root.append($('<row />'));
-                });
-                var data = $("#puffer").html();
-            });
-
-            /////////////////
-            // New Row Button
-            //
-            $("#add").click(function (event) {
-                i++;
-                $("#main").append(
-                    "<p id=\"p" + i + "\">" +
-                        "<input id=\"d" + i + "\" name=" + i + " type=\"button\" value=\"Delete\"/>" +
-                        "<input id=\"b" + i + "\" name=" + i + " type=\"button\" value=\"Add item\"/>:" +
-                    "</p>");
-
-                $("table", puffer).append("<row id=\"r" + i + "\"></row>");
-
-                ///////////////
-                // Add new item
-                //
-                $("#b" + i).click(function (event) {
-                    index = event.target.name;
-                    if (j[index] == null)
-                        j[index] = 1;
-                    else
-                        j[index]++;
-
-                    var text = htmlEncode($("#text").val());
-                    $("#text").val("");
-                    var type = htmlEncode($("#type").val());
-
-                    $("#p" + index).append(
-                        "<input " +
-                            "id=\"btn" + index + "|" + j[index] + "\" " +
-                            "name=" + index + "|" + j[index] + " " +
-                            "type=\"button\" " +
-                            "value=\"" + text + "\"/>");
-
-
-                    $("#r" + index, puffer).append(
-                        "<button " +
-                            "id=\"rcbtn" + index + "|" + j[index] + "\" " +
-                            "name=" + index + "|" + j[index] + " " +
-                            "type=\"" + type + "\" " +
-                            "value=\"" + text + "\"/>");
-
-                    ///////////////
-                    // Delete Item
-                    //
-                    $("#btn" + index + "|" + j[index]).click(function (event) {
-                        var t = this.name.split("|");
-                        $("#btn" + t[0] + "|" + t[1]).remove();
-
-                        $("#rcbtn" + t[0] + "|" + t[1], puffer).remove();
-                    });
-                });
-
-                //////////////
-                // Delete Row 
-                //
-                $("#d" + i).click(function (event) {
-                    $("#p" + this.name).remove();
-
-                    $("#r" + this.name, puffer).remove();
-                });
-                event.preventDefault();
-            });
-        })
-    </script>
+    <div style="clear: both" />
 </body>
+<script type="text/javascript">
+    function htmlEncode(value) {
+        return $('<div/>').text(value).html();
+    }
+
+    function htmlDecode(value) {
+        return $('<div/>').html(value).text();
+    }
+
+    var selected;
+
+    $(document).ready(function () {
+
+        //////////////
+        // Fill List
+        //
+        $.get('http://localhost:8080/jersey-webapp/webresources/layouts/list', function (data) {
+            for (z = 0; z < data.length; z++) {
+                var item = data[z];
+                var a = $("<a id=\"alistitem" + z + "\"/>");
+                a.text(item.name);
+                a.attr("ItemId", item.id);
+                a.click(function (event) {
+                    var id = $("#" + this.id).attr("ItemId");
+                    $.get('http://localhost:8080/jersey-webapp/webresources/layouts/?id=' + id, function (data) {
+                        $("#itemid").val(data.id);
+                        $("#name").val(data.name);
+                        $("#xml").val(data.text);
+                    });
+                    selected = this.id;
+
+                    event.preventDefault();
+                });
+                $("#left").append($('<p />').append(a));
+            }
+        });
+
+        //////////////
+        // Save button
+        //
+        $("#btnSave").click(function (event) {
+            var data = new Object();
+
+            data.id = $("#itemid").val();
+            data.name = $("#name").val();
+            data.text = $("#xml").val();
+
+            $.ajax({
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                dataType: 'json',
+                success: function (data2) {
+                    $("#" + selected).text(data.name);
+                },
+                error: function () {
+                    alert("Update Failed");
+                },
+                processData: false,
+                type: 'POST',
+                url: 'http://localhost:8080/jersey-webapp/webresources/layouts/'
+            });
+        });
+
+        //////////////
+        // Delete button
+        //
+        $("#btnDelete").click(function (event) {
+            if (selected != null) {
+                var id = $("#itemid").val();
+                $.ajax({
+                    contentType: 'application/json',
+                    data: null,
+                    dataType: 'json',
+                    success: function (data) {
+                        $("#" + selected).remove();
+                        selected = null;
+                        $("#itemid").val('');
+                        $("#name").val('');
+                        $("#xml").val('');
+                    },
+                    error: function () {
+                        alert("Update Failed");
+                    },
+                    processData: false,
+                    type: 'DELETE',
+                    url: 'http://localhost:8080/jersey-webapp/webresources/layouts/?id=' + id
+                });
+            }
+        });
+    });
+</script>
 </html>

@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Edit Layout</title>
+    <script type="text/javascript" language="javascript" src="scripts/jquery-1.4.1-vsdoc.js"></script>
+    <style type="text/css">
+        label
+        {
+            padding: 0px 20px 0px 10px;
+            display: block;
+            float: left;
+            width: 50px;
+        }
+        #menu ul
+        {
+            list-style: none;
+            float: left;
+        }
+        #menu li
+        {
+            float: left;
+            margin: 5px 5px 5px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li><a href="index.htm">Edit</a></li>
+            <li><a href="EditLayout.htm">Add new</a></li>
+        </ul>
+    </div>
+    <br style="clear:both" />
+    <div>
+        <p>
+            <label for="name">
+                Name:</label>
+            <input id="name" name="name" type="text" />
+        </p>
+        <p>
+            <label for="type">
+                Type:</label>
+            <select id="type">
+                <option>Character</option>
+                <option>Special Key</option>
+            </select>
+        </p>
+        <p id="ptext">
+            <label for="text">
+                Text:</label>
+            <input id="text" name="text" type="text" />
+        </p>
+        <p id="pKey">
+            <label for="key">
+                Key:</label>
+            <select id="key">
+                <option>VKEY_VOLUME_UP</option>
+                <option>VKEY_VOLUME_DOWN</option>
+            </select>
+        </p>
+        <p id="pChar">
+            <label for="value">
+                Character:</label>
+            <input id="value" name="text" type="text" />
+        </p>
+    </div>
+    <div>
+        <input id="add" type="button" value="Add Row" />
+        <input id="btnSend" type="button" value="Save" />
+    </div>
+    <div id="main">
+    </div>
+</body>
+<script type="text/javascript">
+
+    function htmlEncode(value) {
+        return $('<div/>').text(value).html();
+    }
+
+    function htmlDecode(value) {
+        return $('<div/>').html(value).text();
+    }
+
+    index = 0;
+    var itemIndexes = new Array();
+
+    function GetItem() {
+
+        var item = new Object();
+        item.text = htmlEncode($("#text").val());
+
+        if ($("#type").val() == "Character") {
+            item.value = htmlEncode($("#value").val());
+        } else {
+            item.value = htmlEncode($("#key").val());
+        }
+
+        return item;
+    }
+
+    function CreateItemNode(rowIndex) {
+        var item = GetItem();
+        itemIndexes[rowIndex]++;
+        itemIndex = itemIndexes[rowIndex];
+
+        var node = $("<input " +
+                    "id=\"btn" + rowIndex + "x" + itemIndex + "\" " +
+                    "name=\"" + rowIndex + "x" + itemIndex + "\" " +
+                    "type=\"button\" " +
+                    "value=\"" + item.text + "\"/>");
+        node.attr("btnValue", item.value);
+        node.attr("btnText", item.text);
+        return $("<span />").append(node);
+    }
+
+    function CreateRowNode() {
+        index++;
+        itemIndexes[index] = 0;
+        return "<p id=\"p" + index + "\">" +
+                        "<input id=\"d" + index + "\" name=" + index + " type=\"button\" value=\"Delete\"/>" +
+                        "<input id=\"b" + index + "\" name=" + index + " type=\"button\" value=\"Add item\"/>:" +
+                   "</p>";
+    }
+
+    ////////////
+    // Init
+    //
+    $(document).ready(function () {
+
+        //////////////
+        // Send button
+        //
+        $("#btnSend").click(function (event) {
+            var root = $('<rc />');
+            $("#main p").each(function (index, p) {
+                var row = $('<row />');
+                $("span", p).each(function (index2, span) {
+                    var button = $('<button />');
+                    var i = $("input", span);
+                    button.attr("text", i.attr("btnText"));
+                    button.attr("value", i.attr("btnValue"));
+                    row.append(button);
+                });
+                root.append(row);
+            });
+
+            var data = new Object();
+            data.id = null;
+            data.name = $("#name").val();
+            data.text = $('<div />').append(root).html();
+
+            $.ajax({
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                dataType: 'json',
+                success: function (data2) {
+                    window.location.href = window.location.href;
+                },
+                error: function () {
+                    alert("Update Failed");
+                },
+                processData: false,
+                type: 'PUT',
+                url: 'http://localhost:8080/jersey-webapp/webresources/layouts/'
+            });
+        });
+
+        /////////////////////////////////////
+        // Disable not used elements by type
+        //
+        $("#pKey").hide();
+        $("#type").change(function (event) {
+            if (this.value == "Character") {
+                $("#pChar").show();
+                $("#pKey").hide();
+            } else {
+                $("#pKey").show();
+                $("#pChar").hide();
+            }
+        });
+
+        /////////////////
+        // New Row Button
+        //
+        $("#add").click(function (event) {
+            $("#main").append(CreateRowNode());
+
+            ///////////////
+            // Add new item
+            //
+            $("#b" + index).click(function (event) {
+                rowIndex = parseInt(event.target.name);
+                $("#p" + rowIndex).append(CreateItemNode(rowIndex));
+                itemIndex = itemIndexes[rowIndex];
+
+                ///////////////
+                // Delete Item
+                //
+                $("#btn" + rowIndex + "x" + itemIndex).click(function (event) {
+                    var t = this.name.split("x");
+                    rowIndex = t[0];
+                    itemIndex = t[1];
+                    $("#btn" + rowIndex + "x" + itemIndex).remove();
+                });
+            });
+
+            //////////////
+            // Delete Row 
+            //
+            $("#d" + index).click(function (event) {
+                rowIndex = this.name;
+                $("#p" + rowIndex).remove();
+            });
+        });
+    });
+
+</script>
+</html>

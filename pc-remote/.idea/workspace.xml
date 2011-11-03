@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="295b8dfe-30d8-490b-8e58-4a7d201005ff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/hu/za/pc_remote/common/KeyCode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/EventSender.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/desktop-agent/src/test/java/hu/za/pc_remote/desktop_agent/EventSenderTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/common.iml" afterPath="$PROJECT_DIR$/common/common.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop-agent/desktop-agent.iml" afterPath="$PROJECT_DIR$/desktop-agent/desktop-agent.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop-agent/pom.xml" afterPath="$PROJECT_DIR$/desktop-agent/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java" afterPath="$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop-agent/src/main/resources/log4j.xml" afterPath="$PROJECT_DIR$/desktop-agent/src/main/resources/log4j.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCXmlParser.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCXmlParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/TouchPad.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/TouchPad.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml-generator/xml-generator.iml" afterPath="$PROJECT_DIR$/xml-generator/xml-generator.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jersey-webapp/pom.xml" afterPath="$PROJECT_DIR$/jersey-webapp/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jersey-webapp/src/main/webapp/index.htm" afterPath="$PROJECT_DIR$/jersey-webapp/src/main/webapp/index.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jersey-webapp/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/jersey-webapp/src/main/webapp/index.jsp" />
     </list>
     <ignored path="pc-remote.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -129,46 +122,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EventSender.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/EventSender.java">
+      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jersey-webapp/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="730" selection-end="730" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BTManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="24" selection-start="3192" selection-end="3192" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log4j.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/desktop-agent/src/main/resources/log4j.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="34" selection-start="508" selection-end="508" vertical-scroll-proportion="0.751938">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventSenderTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/desktop-agent/src/test/java/hu/za/pc_remote/desktop_agent/EventSenderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="2" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RCXmlParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCXmlParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="26" selection-start="2188" selection-end="2188" vertical-scroll-proportion="0.0">
+            <state line="27" column="65" selection-start="911" selection-end="911" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -195,7 +152,34 @@
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jersey-webapp/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1494" selection-end="1685" vertical-scroll-proportion="0.0">
+            <state line="54" column="71" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jetty-env.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jersey-webapp/src/main/webapp/WEB-INF/jetty-env.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DAO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/DAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="0" selection-start="1507" selection-end="1507" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LayoutService.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/LayoutService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="74" selection-start="1470" selection-end="1470" vertical-scroll-proportion="0.40923077">
               <folding />
             </state>
           </provider>
@@ -233,8 +217,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Touchpad.java" />
-        <option value="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Element.java" />
         <option value="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Row.java" />
         <option value="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Table.java" />
         <option value="$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/LayoutBean.java" />
@@ -249,6 +231,8 @@
         <option value="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCXmlParser.java" />
         <option value="$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java" />
         <option value="$PROJECT_DIR$/desktop-agent/src/main/resources/log4j.xml" />
+        <option value="$PROJECT_DIR$/jersey-webapp/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/jersey-webapp/pom.xml" />
       </list>
     </option>
   </component>
@@ -296,8 +280,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Favorites" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -317,194 +299,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xml-generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc_remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc_remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc_remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RCBuilder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="desktop-agent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="desktop-agent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="desktop-agent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="desktop-agent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -521,7 +319,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Application.run desktop agent">
+  <component name="RunManager" selected="Maven.jersey jetty:run">
     <configuration default="false" name="EventSenderTest.MoveMouseTest" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="desktop-agent" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1083,13 +881,13 @@
       <item index="1" class="java.lang.String" itemvalue="Application.run desktop agent" />
       <item index="2" class="java.lang.String" itemvalue="Application.generate xml" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.EventSenderTest" />
-      <item index="4" class="java.lang.String" itemvalue="Maven.jersey jetty:run" />
-      <item index="5" class="java.lang.String" itemvalue="Maven.jersey package" />
-      <item index="6" class="java.lang.String" itemvalue="Maven.common clean install" />
-      <item index="7" class="java.lang.String" itemvalue="Maven.parent clean install" />
-      <item index="8" class="java.lang.String" itemvalue="Maven.desktop agent clean install" />
-      <item index="9" class="java.lang.String" itemvalue="Maven.desktop agent test" />
-      <item index="10" class="java.lang.String" itemvalue="JUnit.EventSenderTest.MoveMouseTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.EventSenderTest.MoveMouseTest" />
+      <item index="5" class="java.lang.String" itemvalue="Maven.jersey jetty:run" />
+      <item index="6" class="java.lang.String" itemvalue="Maven.jersey package" />
+      <item index="7" class="java.lang.String" itemvalue="Maven.common clean install" />
+      <item index="8" class="java.lang.String" itemvalue="Maven.parent clean install" />
+      <item index="9" class="java.lang.String" itemvalue="Maven.desktop agent clean install" />
+      <item index="10" class="java.lang.String" itemvalue="Maven.desktop agent test" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1147,27 +945,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
+    <frame x="1594" y="-165" width="1320" height="784" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3985043" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3975535" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32874617" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.46330276" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.62666667" sideWeight="0.46421054" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1984127" sideWeight="0.46330276" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21825397" sideWeight="0.5657492" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.37461773" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53669727" sideWeight="0.49755502" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43425077" sideWeight="0.49755502" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3985043" sideWeight="0.49755502" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32874617" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.37461773" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1226,102 +1024,88 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Element.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="15" selection-start="263" selection-end="263" vertical-scroll-proportion="0.20572057" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Row.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="18" selection-start="282" selection-end="282" vertical-scroll-proportion="0.22442244" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xml-generator/src/main/java/hu/za/pc_remote/xmlgeneration/beans/Table.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="35" selection-start="344" selection-end="344" vertical-scroll-proportion="0.22442244" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xml-generator/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/TouchPad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="42" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/hu/za/pc_remote/common/RCAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="36" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jersey-webapp/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1494" selection-end="1685" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/desktop-agent/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="20" selection-start="1888" selection-end="2462" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCXmlParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="26" selection-start="2188" selection-end="2188" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/desktop-agent/src/test/java/hu/za/pc_remote/desktop_agent/EventSenderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="2" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/hu/za/pc_remote/common/KeyCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="0" selection-start="2454" selection-end="2553" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/EventSender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="730" selection-end="730" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="24" selection-start="3192" selection-end="3192" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="32" column="0" selection-start="730" selection-end="730" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/desktop-agent/src/main/resources/log4j.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="34" selection-start="508" selection-end="508" vertical-scroll-proportion="0.751938">
+        <state line="15" column="34" selection-start="508" selection-end="508" vertical-scroll-proportion="0.27687296" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/desktop-agent/src/test/java/hu/za/pc_remote/desktop_agent/EventSenderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="2" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/RCBuilder/RCXmlParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="26" selection-start="2188" selection-end="2188" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jersey-webapp/src/main/webapp/index.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2028302" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="24" selection-start="3192" selection-end="3192" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jersey-webapp/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="65" selection-start="911" selection-end="911" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/desktop-agent/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="20" selection-start="1888" selection-end="2462" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jersey-webapp/src/main/webapp/WEB-INF/jetty-env.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/DAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="1507" selection-end="1507" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/hu/za/pc_remote/common/KeyCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="139" column="0" selection-start="2454" selection-end="2553" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="13" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jersey-webapp/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="71" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/hu/za/pc_remote/common/QueryParamConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="31" selection-start="252" selection-end="252" vertical-scroll-proportion="0.52307695">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jersey-webapp/src/main/java/hu/za/pc_remote/jersey_webapp/LayoutService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="74" selection-start="1470" selection-end="1470" vertical-scroll-proportion="0.40923077">
           <folding />
         </state>
       </provider>
