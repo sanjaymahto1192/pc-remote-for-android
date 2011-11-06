@@ -1,11 +1,18 @@
 package hu.za.pc_remote.jersey_webapp;
 
+import com.sun.jersey.spi.container.WebApplication;
 import hu.za.pc_remote.common.QueryParamConstants;
+import hu.za.pc_remote.jersey_webapp.entities.Layout;
+import hu.za.pc_remote.jersey_webapp.entities.LayoutListItem;
 import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
+import javax.jws.WebResult;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Variant;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -34,23 +41,21 @@ public class LayoutService {
 
     @GET
     @Produces("application/json")
-    public JSONObject getLayout(@QueryParam(QueryParamConstants.ID) int id) throws JSONException {
+    public Layout getLayout(@QueryParam(QueryParamConstants.ID) int id) throws JSONException {
         Layout result = DAO.getLayout(id);
-        return result.toJSON();
+        return result;
     }
 
     @POST
     @Consumes("application/json")
-    public void updateLayout(JSONObject body) throws JSONException {
-        Layout layout = Layout.getLayoutFromJSON(body);
-        DAO.updateLayout(layout);
+    public void updateLayout(Layout body) throws JSONException {
+        DAO.updateLayout(body);
     }
 
     @PUT
     @Consumes("application/json")
-    public void putLayout(JSONObject body) throws JSONException {
-        Layout layout = Layout.getLayoutFromJSON(body);
-        DAO.insertLayout(layout);
+    public void putLayout(Layout body) throws JSONException {
+        DAO.insertLayout(body);
     }
 
     @DELETE

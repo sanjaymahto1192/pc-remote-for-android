@@ -1,4 +1,4 @@
-package hu.za.pc_remote.xmlgeneration.beans;
+package hu.za.pc_remote.jersey_webapp.entities;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -10,12 +10,10 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Time: 9:42 PM
  * To change this template use File | Settings | File Templates.
  */
-@XmlRootElement
+@XmlRootElement(name = "button")
 public class Button {
-    @XmlAttribute
-    public String actionType;
-    @XmlAttribute
+    @XmlAttribute(required = true)
+    public String key;
+    @XmlAttribute(required = true)
     public String text;
-    @XmlAttribute
-    public int[] args;
 }

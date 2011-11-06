@@ -32,11 +32,12 @@ public class RCXmlParser extends XMLReaderAdapter {
     private static final String buttonTag = "button";
     private static final String buttonText = "text";
     private static final String buttonKeyCode = "key";
-    private static final String actionTypeAttr = "actiontype";
     private static final String touchPadTag = "touchpad";
+    private static final String keyboarTag = "keyboard";
 
     private View result = null;
 
+    private Keyboard keyboard = null;
     private TouchPad touchPad = null;
     private TableLayout table = null;
     private TableRow row = null;
@@ -63,18 +64,24 @@ public class RCXmlParser extends XMLReaderAdapter {
             }
         } else if (localName.equals(buttonTag)) {
             if (row != null) {
-                String s = atts.getValue(actionTypeAttr);
                 RCAction action = new RCAction();
-                action.type = RCAction.Type.valueOf(s);
+                action.type = RCAction.Type.KEY_PRESS;
                 action.arguments = new Serializable[1];
                 String key = atts.getValue(buttonKeyCode);
-                action.arguments[0] = KeyCode.valueOf(key);
+                try{
+                    action.arguments[0] = KeyCode.valueOf(key);
+                }catch (IllegalArgumentException iae){
+                    if(key.length() > 0)
+                        action.arguments[0] = new Integer((int)key.charAt(0));
+                }
                 RCButton button = new RCButton(action, context);
                 button.setText(atts.getValue(buttonText));
                 row.addView(button);
             }
         } else if (localName.equals(touchPadTag)) {
             touchPad = new TouchPad(context);
+        } else if (localName.equals(keyboarTag)) {
+            keyboard = new Keyboard(context);
         }
     }
 
@@ -86,6 +93,8 @@ public class RCXmlParser extends XMLReaderAdapter {
             result = table;
         } else if (localName.equals(touchPadTag)) {
             result = touchPad;
+        } else if (localName.equals(keyboarTag)) {
+            result = keyboard;
         }
     }
 }

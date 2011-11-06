@@ -91,26 +91,28 @@
         // Save button
         //
         $("#btnSave").click(function (event) {
-            var data = new Object();
+           if (selected != null) {
+                var data = new Object();
 
-            data.id = $("#itemid").val();
-            data.name = $("#name").val();
-            data.text = $("#xml").val();
+                data.id = $("#itemid").val();
+                data.name = $("#name").val();
+                data.text = $("#xml").val();
 
-            $.ajax({
-                contentType: 'application/json',
-                data: JSON.stringify(data),
-                dataType: 'json',
-                success: function (data2) {
-                    $("#" + selected).text(data.name);
-                },
-                error: function () {
-                    alert("Update Failed");
-                },
-                processData: false,
-                type: 'POST',
-                url: 'http://localhost:8080/jersey-webapp/webresources/layouts/'
-            });
+                $.ajax({
+                    contentType: 'application/json',
+                    data: JSON.stringify(data),
+                    dataType: 'json',
+                    success: function (data2) {
+                        $("#" + selected).text(data.name);
+                    },
+                    error: function () {
+                        alert("Update Failed");
+                    },
+                    processData: false,
+                    type: 'POST',
+                    url: 'http://localhost:8080/jersey-webapp/webresources/layouts/'
+                });
+            }
         });
 
         //////////////

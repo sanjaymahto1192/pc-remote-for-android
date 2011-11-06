@@ -1,8 +1,10 @@
-package hu.za.pc_remote.jersey_webapp;
+package hu.za.pc_remote.jersey_webapp.entities;
 
 import hu.za.pc_remote.common.ListItemJSONConstants;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
+
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Created by IntelliJ IDEA.
@@ -11,6 +13,7 @@ import org.codehaus.jettison.json.JSONObject;
  * Time: 10:51 PM
  * To change this template use File | Settings | File Templates.
  */
+@XmlRootElement
 public class LayoutListItem {
     private int id;
     private String name;

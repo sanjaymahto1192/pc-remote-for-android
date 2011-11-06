@@ -5,6 +5,9 @@ import hu.za.pc_remote.common.RCAction;
 import org.apache.log4j.Logger;
 
 
+import java.awt.event.KeyEvent;
+import java.io.File;
+
 import static hu.za.pc_remote.common.RCAction.Type.*;
 
 
@@ -19,12 +22,21 @@ public class EventSender {
 
     private static Logger logger = Logger.getLogger(EventSender.class);
 
-    private Mover mover = null;
-
-    static{
-        System.load("C:\\Users\\Andor\\diploma\\git\\pc-remote\\desktop-agent\\src\\main\\resources\\inputsender_x64.dll");
+    static {
+        String currentDir = new File(".").getAbsolutePath();
+        String dll = null;
+        if (System.getProperty("os.name").startsWith("Windows")) {
+            if (System.getProperty("os.arch").contains("64")) {
+                dll = "inputsender_x64.dll";
+            } else {
+                dll = "inputsender_x86.dll";
+            }
+        }
+        if (dll == null) {
+            throw new RuntimeException("Not supported OS");
+        }
+        System.load(currentDir + "\\" + dll);
     }
-
 
 
     native void sendMouseMove(int x, int y);
@@ -34,28 +46,51 @@ public class EventSender {
     native void sendKeyPress(int key);
 
     public void send(RCAction action) {
-        if(mover != null){
-            mover.running = false;
+        if (logger.isDebugEnabled()) {
+            logger.debug("Sending Event:" + action);
         }
+
         switch (action.type) {
             case MOUSE_MOVE:
-                float x = (Float)action.arguments[0];
-                float y = (Float)action.arguments[1];
-                float vx = (Float)action.arguments[2];
-                float vy = (Float)action.arguments[3];
-/*                if(vy == 0 && vy == 0){*/
-                    sendMouseMove((int)x, (int)y);
-/*                }
-                else{
-                    mover = new Mover(vx, vy);
-                    mover.start();
-                }*/
+                float x = (Float) action.arguments[0];
+                float y = (Float) action.arguments[1];
+
+                sendMouseMove((int) x, (int) y);
+
                 break;
             case MOUSE_CLICK:
-                sendMouseClick((Integer)action.arguments[0]);
+                sendMouseClick((Integer) action.arguments[0]);
                 break;
             case KEY_PRESS:
-                sendKeyPress(((KeyCode)action.arguments[0]).getCode());
+                Object o = action.arguments[0];
+                if (o instanceof KeyCode) {
+                    sendKeyPress(((KeyCode) o).getCode());
+                } else if (o instanceof Integer) {
+                    char c = Character.toUpperCase((char) ((Integer) o).intValue());
+
+                    if (c == ',') {
+                        c = (char) KeyCode.VK_OEM_COMMA.getCode();
+                    } else if (c == '@') {
+                        c = KeyEvent.VK_AT;
+                    }
+
+                    switch (c){
+                        case '+': c = (char) KeyCode.VK_OEM_PLUS.getCode();
+                            break;
+                        case '-': c = (char) KeyCode.VK_OEM_MINUS.getCode();
+                            break;
+                        case ',': c = (char) KeyCode.VK_OEM_COMMA.getCode();
+                            break;
+                        case '.': c = (char) KeyCode.VK_OEM_PERIOD.getCode();
+                            break;
+                    }
+
+                    if (logger.isDebugEnabled()) {
+                        logger.debug("Sending KeyPress:" + c + " (int:" + (int) c);
+                    }
+
+                    sendKeyPress((int) c);
+                }
                 break;
             case COMMAND:
                 logger.debug("Command arived " + action);
@@ -63,40 +98,4 @@ public class EventSender {
         }
     }
 
-    private class Mover extends Thread {
-        public boolean running = true;
-        private float vx,vy;
-        private static final float a = 50;
-
-        public Mover(float vx, float vy){
-            this.vx = vx;
-            this.vy = vy;
-        }
-
-        public void run() {
-            while (running && vx != 0 && vy != 0) {
-                sendMouseMove((int)(vx / 100),(int) (vy / 100));
-
-                vx = nextValue(vx);
-                vy = nextValue(vy);
-
-                try {
-                    Thread.sleep(50);
-                } catch (InterruptedException e) {
-                    logger.debug(e);
-                }
-            }
-        }
-
-        private float nextValue(float f) {
-            if (f == 0)
-                return 0;
-            float i = f > 0 ? 1 : -1;
-
-            f = f - (a * i);
-            if ((f * i) < 0)
-                f = 0;
-            return f;
-        }
-    }
 }

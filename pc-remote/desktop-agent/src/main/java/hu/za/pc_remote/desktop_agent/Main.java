@@ -88,7 +88,7 @@ public class Main {
 
         }
 
-        manager = new BTManager();
+        manager = new BTManager(trayIcon);
         manager.initialize();
         manager.start();
     }

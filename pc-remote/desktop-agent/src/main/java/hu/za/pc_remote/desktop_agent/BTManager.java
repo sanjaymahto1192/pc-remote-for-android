@@ -1,5 +1,6 @@
 package hu.za.pc_remote.desktop_agent;
 
+import hu.za.pc_remote.common.KeyCode;
 import hu.za.pc_remote.common.RCAction;
 
 import javax.bluetooth.BluetoothStateException;
@@ -35,7 +36,9 @@ public class BTManager extends Thread {
     ObjectInputStream inStream = null;
     EventSender sender = new EventSender();
 
-    public BTManager() {
+    public BTManager(TrayIcon trayIcon) {
+        this.trayIcon = trayIcon;
+
         logger.debug("Setting device to be discoverable...");
         try {
             local = LocalDevice.getLocalDevice();
@@ -47,10 +50,6 @@ public class BTManager extends Thread {
             throw new RuntimeException(e);
         }
 
-    }
-
-    public BTManager(TrayIcon trayIcon) {
-        this.trayIcon = trayIcon;
     }
 
     public void initialize() {
@@ -74,7 +73,8 @@ public class BTManager extends Thread {
 
     public void run() {
         boolean reinit = false;
-        while (true) {
+
+       while (true) {
             if (reinit) {
                 try {
                     Thread.currentThread().sleep(1000);
@@ -89,7 +89,7 @@ public class BTManager extends Thread {
                 logger.debug("Client Connected...");
 
                 if (trayIcon != null) {
-                    trayIcon.displayMessage("Client Connected!", "", TrayIcon.MessageType.INFO);
+                    trayIcon.displayMessage("Bluetooth Agent", "Client Connected", TrayIcon.MessageType.INFO);
                 }
 
                 inStream = new ObjectInputStream(conn.openInputStream());
@@ -108,6 +108,9 @@ public class BTManager extends Thread {
                         if (server != null)
                             server.close();
                         reinit = true;
+                        if (trayIcon != null) {
+                            trayIcon.displayMessage("Bluetooth Agent", "Client Disconnected", TrayIcon.MessageType.INFO);
+                        }
                         break;
                     } catch (ClassNotFoundException e) {
                         logger.error(e);

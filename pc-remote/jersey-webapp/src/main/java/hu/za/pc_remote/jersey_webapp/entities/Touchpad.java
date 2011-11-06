@@ -1,4 +1,4 @@
-package hu.za.pc_remote.xmlgeneration.beans;
+package hu.za.pc_remote.jersey_webapp.entities;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -9,6 +9,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Time: 9:52 PM
  * To change this template use File | Settings | File Templates.
  */
-@XmlRootElement
+@XmlRootElement(name = "touchpad")
 public class Touchpad extends Element{
 }

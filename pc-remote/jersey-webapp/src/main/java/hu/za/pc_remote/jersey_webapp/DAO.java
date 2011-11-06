@@ -1,5 +1,7 @@
 package hu.za.pc_remote.jersey_webapp;
 
+import hu.za.pc_remote.jersey_webapp.entities.Layout;
+import hu.za.pc_remote.jersey_webapp.entities.LayoutListItem;
 import org.apache.log4j.Logger;
 
 import javax.naming.Context;
@@ -86,8 +88,8 @@ public class DAO {
             resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
-                result.setId(resultSet.getInt("id"));
-                result.setName(resultSet.getString("name"));
+                result.id =resultSet.getInt("id");
+                result.name =(resultSet.getString("name"));
                 result.setText(resultSet.getString("text"));
             }
 
@@ -124,9 +126,9 @@ public class DAO {
         try {
             connection = getJNDIConnection();
             preparedStatement = connection.prepareStatement(updateLayoutQuery);
-            preparedStatement.setString(1, layout.getName());
+            preparedStatement.setString(1, layout.name);
             preparedStatement.setString(2, layout.getText());
-            preparedStatement.setInt(3, layout.getId());
+            preparedStatement.setInt(3, layout.id);
             preparedStatement.execute();
 
         } catch (SQLException se) {
@@ -155,7 +157,7 @@ public class DAO {
         try {
             connection = getJNDIConnection();
             preparedStatement = connection.prepareStatement(insertLayoutQuery);
-            preparedStatement.setString(1, layout.getName());
+            preparedStatement.setString(1, layout.name);
             preparedStatement.setString(2, layout.getText());
             preparedStatement.execute();
 

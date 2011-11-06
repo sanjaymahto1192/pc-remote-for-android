@@ -47,20 +47,6 @@
                     <source>1.6</source>
                     <target>1.6</target>
                 </configuration>
-                <!--<executions>
-                    <execution>
-                        <id>default-testCompile</id>
-                        <phase>test-compile</phase>
-                        <configuration>
-                            <testExcludes>
-                                <exclude>**/jsfunit/*.java</exclude>
-                            </testExcludes>
-                        </configuration>
-                        <goals>
-                            <goal>testCompile</goal>
-                        </goals>
-                    </execution>
-                </executions>-->
             </plugin>
         </plugins>
     </build>
