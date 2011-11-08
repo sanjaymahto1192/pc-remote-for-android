@@ -24,7 +24,7 @@ import java.util.List;
  */
 public class DAO {
     private static final Logger log = Logger.getLogger(DAO.class);
-    private static final String DATASOURCE_CONTEXT = "jdbc/mysqldb";
+    private static final String DATASOURCE_CONTEXT = "java:comp/env/jdbc/mysqldb";
     private static final String listLayoutsQuery = "SELECT id as id, name as name FROM layouts";
     private static final String getLayoutQuery = "SELECT id as id, name as name, text as text FROM layouts WHERE id = ?";
     private static final String updateLayoutQuery = "UPDATE layouts SET name=?, text=? WHERE id = ?";
@@ -88,13 +88,16 @@ public class DAO {
             resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
-                result.id =resultSet.getInt("id");
-                result.name =(resultSet.getString("name"));
+                result.id = resultSet.getInt("id");
+                result.name = (resultSet.getString("name"));
                 result.setText(resultSet.getString("text"));
             }
 
         } catch (SQLException se) {
             log.error(se);
+        } catch (XmlValidationException e) {
+            e.printStackTrace();
+            log.error("Not valid xml in the DB!!!!!!!!!!!");
         } finally {
             if (resultSet != null)
                 try {
@@ -133,6 +136,10 @@ public class DAO {
 
         } catch (SQLException se) {
             log.error(se);
+        } catch (XmlValidationException e) {
+            e.printStackTrace();
+            //This part should not be reached at this part the xml has to be valid because of the JAXB parsing
+            throw new RuntimeException("Unexpected Exception");
         } finally {
             if (preparedStatement != null)
                 try {
@@ -163,6 +170,10 @@ public class DAO {
 
         } catch (SQLException se) {
             log.error(se);
+        } catch (XmlValidationException e) {
+            e.printStackTrace();
+            //This part should not be reached at this part the xml has to be valid because of the JAXB parsing
+            throw new RuntimeException("Unexpected Exception");
         } finally {
             if (preparedStatement != null)
                 try {
@@ -221,9 +232,9 @@ public class DAO {
                 log.error("Failed to lookup datasource.");
             }
         } catch (NamingException ex) {
-            log.error("Cannot get connection: " + ex);
+            log.error("Cannot get connection: " , ex);
         } catch (SQLException ex) {
-            log.error("Cannot get connection: " + ex);
+            log.error("Cannot get connection: " , ex);
         }
         return result;
     }

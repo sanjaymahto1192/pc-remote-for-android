@@ -21,12 +21,26 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.1.1</version>
+            </plugin>
             <plugin>
                 <groupId>org.glassfish</groupId>
                 <artifactId>maven-glassfish-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>tomcat-maven-plugin</artifactId>
+                <configuration>
+                    <server>local_tomcat</server>
+                    <url>http://localhost:8080/manager/text</url>
+                    <serverXml>server.xml</serverXml>
+                </configuration>
+            </plugin>
         </plugins>
+
     </build>
     <dependencies>
         <dependency>

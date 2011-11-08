@@ -1,54 +1,94 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Plain & Clean
+   
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20111024
+
+-->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Manage layouts</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
     <script type="text/javascript" language="javascript" src="scripts/jquery-1.4.1-vsdoc.js"></script>
     <style type="text/css">
-        #menu ul
+        #name
         {
-            list-style:none;
-            float: left;
+            width: 292px;
         }
-        #menu li
+        #xml
         {
-            float: left;
-            margin: 5px 5px 5px 5px;
-        }
-        #left
-        {
-            float: left; 
-            margin: 10px 50px 50px 50px;
-        }
-        #right
-        {
-            float: left;
-            margin: 10px 50px 50px 20px;
+            height: 408px;
         }
     </style>
 </head>
 <body>
-    <div id="menu">
-        <ul>
-            <li><a href="index.htm">Edit</a></li>
-            <li><a href="EditLayout.htm">Add new</a></li>
-        </ul>
+    <div id="wrapper">
+        <div id="header" class="container">
+            <div id="logo">
+                <h1>
+                    <a href="#">Manage Layouts </a>
+                </h1>
+                <p>
+                    Layout list</a></p>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li class="current_page_item"><a href="index.htm">Layout list</a></li>
+                    <li><a href="EditLayout.htm">Add New</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="clear: both;">
+            &nbsp;</div>
+        <!-- end #header -->
+        <div id="page" class="container">
+            <div id="sidebar">
+                <ul>
+                    <li>
+                        <h2>
+                            Layouts</h2>
+                        <ul id="left">
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- end #sidebar -->
+            <!--		<div style="clear: both;">&nbsp;</div>-->
+            <div id="content">
+                <div class="post">
+                    <p>
+                        <input id="name" type="text" /><input id="itemid" type="hidden" />
+                    </p>
+                    <p>
+                        <textarea id="xml" cols="60"></textarea>
+                    </p>
+                    <p>
+                        <a id="btnSave" href="#" class="more">Save</a> <a id="btnDelete" href="#" class="more">
+                            Delete</a>
+                    </p>
+                </div>
+            </div>
+            <!-- end #content -->
+            <div style="clear: both;">
+                &nbsp;</div>
+        </div>
+        <!-- end #page -->
     </div>
-    <br style="clear:both" />
-    <div id="left">
+    <div id="footer">
+        <p>
+            Copyright (c) 2011 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">
+                Free CSS Templates</a>.</p>
     </div>
-    <div id="right">
-        <p>
-            <input id="name" type="text" /><input id="itemid" type="hidden" />
-        </p>
-        <p>
-            <textarea id="xml" rows="10" cols="60"></textarea>
-        </p>
-        <p>
-            <input id="btnSave" type="button" value="Save" />
-            <input id="btnDelete" type="button" value="Delete" />
-        </p>
-    </div>
-    <div style="clear: both" />
+    <!-- end #footer -->
 </body>
 <script type="text/javascript">
     function htmlEncode(value) {
@@ -66,7 +106,7 @@
         //////////////
         // Fill List
         //
-        $.get('http://localhost:8080/jersey-webapp/webresources/layouts/list', function (data) {
+        $.get(location.origin + '/jersey-webapp/webresources/layouts/list', function (data) {
             for (z = 0; z < data.length; z++) {
                 var item = data[z];
                 var a = $("<a id=\"alistitem" + z + "\"/>");
@@ -74,7 +114,7 @@
                 a.attr("ItemId", item.id);
                 a.click(function (event) {
                     var id = $("#" + this.id).attr("ItemId");
-                    $.get('http://localhost:8080/jersey-webapp/webresources/layouts/?id=' + id, function (data) {
+                    $.get(location.origin + '/jersey-webapp/webresources/layouts/?id=' + id, function (data) {
                         $("#itemid").val(data.id);
                         $("#name").val(data.name);
                         $("#xml").val(data.text);
@@ -83,7 +123,7 @@
 
                     event.preventDefault();
                 });
-                $("#left").append($('<p />').append(a));
+                $("#left").append($('<li />').append(a));
             }
         });
 
@@ -91,7 +131,7 @@
         // Save button
         //
         $("#btnSave").click(function (event) {
-           if (selected != null) {
+            if (selected != null) {
                 var data = new Object();
 
                 data.id = $("#itemid").val();
@@ -110,9 +150,10 @@
                     },
                     processData: false,
                     type: 'POST',
-                    url: 'http://localhost:8080/jersey-webapp/webresources/layouts/'
+                    url: location.origin + '/jersey-webapp/webresources/layouts/'
                 });
             }
+            event.preventDefault();
         });
 
         //////////////
@@ -137,9 +178,10 @@
                     },
                     processData: false,
                     type: 'DELETE',
-                    url: 'http://localhost:8080/jersey-webapp/webresources/layouts/?id=' + id
+                    url: location.origin + '/jersey-webapp/webresources/layouts/?id=' + id
                 });
             }
+            event.preventDefault();
         });
     });
 </script>
