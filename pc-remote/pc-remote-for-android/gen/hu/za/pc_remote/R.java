@@ -46,7 +46,9 @@ public final class R {
     }
     public static final class string {
         public static final int AddNewLayout=0x7f05000c;
+        public static final int FailedToConnect=0x7f050010;
         public static final int NoReuslt=0x7f05000b;
+        public static final int StorageNotAvailable=0x7f050011;
         public static final int app_name=0x7f050000;
         public static final int connSettingsButtonText=0x7f050002;
         public static final int connectedText=0x7f050004;

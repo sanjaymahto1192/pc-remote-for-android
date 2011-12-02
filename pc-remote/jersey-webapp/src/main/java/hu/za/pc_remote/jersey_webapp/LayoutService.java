@@ -30,7 +30,7 @@ public class LayoutService {
     @GET
     @Produces("application/json")
     @Path("/list")
-    public JSONArray getIt() throws JSONException {
+    public JSONArray listLayouts() throws JSONException {
         JSONArray result = new JSONArray();
         List<LayoutListItem> items = DAO.getLayouts();
         for (LayoutListItem item : items) {

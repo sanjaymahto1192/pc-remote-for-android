@@ -1,7 +1,6 @@
-package hu.za.pc_remote.RCLayoutsManagement;
+package hu.za.pc_remote.layoutsmanagement;
 
 import android.os.Environment;
-import android.text.StaticLayout;
 import android.util.Log;
 
 import java.io.*;
@@ -97,6 +96,17 @@ public class FileManager {
             }
         }
         return result;
+    }
+
+    public static boolean isStorageAvailable(){
+        String state = Environment.getExternalStorageState();
+        return Environment.MEDIA_MOUNTED.equals(state) ||
+                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state);
+    }
+
+    public static boolean isStorageWritable(){
+       String state = Environment.getExternalStorageState();
+       return Environment.MEDIA_MOUNTED.equals(state);
     }
 
     private static String getFileName(LayoutListItem item){

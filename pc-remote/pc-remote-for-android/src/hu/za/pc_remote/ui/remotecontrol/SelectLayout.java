@@ -1,16 +1,13 @@
-package hu.za.pc_remote.ui.RCBuilder;
+package hu.za.pc_remote.ui.remotecontrol;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 import hu.za.pc_remote.R;
-import hu.za.pc_remote.RCLayoutsManagement.FileManager;
-import hu.za.pc_remote.RCLayoutsManagement.LayoutListItem;
-import hu.za.pc_remote.ui.RCLayouts.LayoutDownloader;
+import hu.za.pc_remote.layoutsmanagement.FileManager;
+import hu.za.pc_remote.layoutsmanagement.LayoutListItem;
 
 import java.util.List;
 
@@ -71,8 +68,8 @@ public class SelectLayout extends Activity {
     private class ItemClieckedListener implements ListView.OnItemClickListener {
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
             final LayoutListItem item = adapter.getItem(i);
-            Intent starterIntent = new Intent(SelectLayout.this, RCBuilder.class);
-            starterIntent.putExtra(RCBuilder.LayoutItemKey, item);
+            Intent starterIntent = new Intent(SelectLayout.this, RemoteControl.class);
+            starterIntent.putExtra(RemoteControl.LayoutItemKey, item);
             startActivity(starterIntent);
         }
     }

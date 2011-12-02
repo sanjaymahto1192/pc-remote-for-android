@@ -1,4 +1,4 @@
-package hu.za.pc_remote.ui.RCBuilder;
+package hu.za.pc_remote.ui.remotecontrol;
 
 import android.content.Context;
 import android.content.Intent;
@@ -21,19 +21,18 @@ public class TouchPad extends SurfaceView implements SurfaceHolder.Callback {
     Context context;
     GestureDetector gestureDetector;
     Drawer drawer;
+    Sender sender;
 
-    float x;
-    float y;
-    float vx;
-    float vy;
+    float x, y, vx, vy, dx, dy;
     static final float a = 50;
+    private float sensitivity = (float) -0.5;
     Paint paint;
 
     public TouchPad(Context context) {
         super(context);
         this.context = context;
 
-        gestureDetector = new GestureDetector(new MyGestureListener());
+        gestureDetector = new GestureDetector(new TouchpadGestureListener());
         x = 100;
         y = 100;
         paint = new Paint();
@@ -51,6 +50,9 @@ public class TouchPad extends SurfaceView implements SurfaceHolder.Callback {
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
         drawer = new Drawer();
         drawer.start();
+
+        sender = new Sender();
+        sender.start();
     }
 
     public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i1, int i2) {
@@ -58,17 +60,17 @@ public class TouchPad extends SurfaceView implements SurfaceHolder.Callback {
     }
 
     public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
-        drawer.running = false;
+        sender.running = drawer.running = false;
     }
 
-    private class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
+    private class TouchpadGestureListener extends GestureDetector.SimpleOnGestureListener {
 
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
             vx += velocityX;
             vy += velocityY;
 
- /*           Intent i = new Intent(ConnectionHandlingService.RC_INTENT_ACTION);
+            /*           Intent i = new Intent(ConnectionHandlingService.RC_INTENT_ACTION);
             RCAction extra = new RCAction();
             extra.type = RCAction.Type.MOUSE_MOVE;
             extra.arguments = new Float[]{new Float(0), new Float(0), velocityX, velocityY};
@@ -79,16 +81,12 @@ public class TouchPad extends SurfaceView implements SurfaceHolder.Callback {
         }
 
         @Override
-        public boolean onScroll(MotionEvent e1, MotionEvent e2, float dx, float dy) {
-            x -= dx;
-            y -= dy;
+        public boolean onScroll(MotionEvent e1, MotionEvent e2, float _dx, float _dy) {
+            x -= _dx;
+            y -= _dy;
 
-            Intent i = new Intent(ConnectionHandlingService.RC_INTENT_ACTION);
-            RCAction extra = new RCAction();
-            extra.type = RCAction.Type.MOUSE_MOVE;
-            extra.arguments = new Float[]{-dx, -dy, new Float(0), new Float(0)};
-            i.putExtra(ConnectionHandlingService.INTENT_DATA_EXTRA_KEY, extra);
-            context.sendBroadcast(i);
+            dx += _dx;
+            dy += _dy;
 
             return true;
         }
@@ -111,6 +109,32 @@ public class TouchPad extends SurfaceView implements SurfaceHolder.Callback {
             context.sendBroadcast(i);
 
             return true;
+        }
+    }
+
+    private class Sender extends Thread {
+        public boolean running = true;
+
+        public void run() {
+
+            while (running) {
+                if (dx != 0 || dy != 0) {
+                    Intent i = new Intent(ConnectionHandlingService.RC_INTENT_ACTION);
+                    RCAction extra = new RCAction();
+                    extra.type = RCAction.Type.MOUSE_MOVE;
+                    extra.arguments = new Float[]{sensitivity * dx, sensitivity * dy, new Float(0), new Float(0)};
+                    i.putExtra(ConnectionHandlingService.INTENT_DATA_EXTRA_KEY, extra);
+                    context.sendBroadcast(i);
+                }
+                dx = 0;
+                dy = 0;
+
+                try {
+                    Thread.sleep(40);
+                } catch (InterruptedException e) {
+                    Log.w("hello", "Drawer thread interrupted");
+                }
+            }
         }
     }
 

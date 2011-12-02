@@ -7,10 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import hu.za.pc_remote.R;
 import hu.za.pc_remote.transport.ConnectionHandlingService;
-import hu.za.pc_remote.ui.RCBuilder.RCBuilder;
-import hu.za.pc_remote.ui.RCBuilder.SelectLayout;
-import hu.za.pc_remote.ui.RCLayouts.LayoutDownloader;
-import hu.za.pc_remote.ui.RCLayouts.LayoutManager;
+import hu.za.pc_remote.ui.remotecontrol.SelectLayout;
+import hu.za.pc_remote.ui.layoutmanager.LayoutManager;
 
 /**
  * Created by IntelliJ IDEA.

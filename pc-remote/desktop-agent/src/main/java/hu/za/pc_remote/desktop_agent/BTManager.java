@@ -43,7 +43,7 @@ public class BTManager extends Thread {
         try {
             local = LocalDevice.getLocalDevice();
             logger.debug(local.getBluetoothAddress());
-            local.setDiscoverable(DiscoveryAgent.GIAC);
+            //local.setDiscoverable(DiscoveryAgent.GIAC);
 
         } catch (BluetoothStateException e) {
             logger.error("Faild to create BTManager", e);

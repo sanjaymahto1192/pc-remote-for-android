@@ -29,29 +29,6 @@ public class Main {
             SystemTray tray = SystemTray.getSystemTray();
             Image image = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/icon.jpg"));
 
-            MouseListener mouseListener = new MouseListener() {
-
-                public void mouseClicked(MouseEvent e) {
-                    logger.debug("Tray Icon - Mouse clicked!");
-                }
-
-                public void mouseEntered(MouseEvent e) {
-                    logger.debug("Tray Icon - Mouse entered!");
-                }
-
-                public void mouseExited(MouseEvent e) {
-                    logger.debug("Tray Icon - Mouse exited!");
-                }
-
-                public void mousePressed(MouseEvent e) {
-                    logger.debug("Tray Icon - Mouse pressed!");
-                }
-
-                public void mouseReleased(MouseEvent e) {
-                    logger.debug("Tray Icon - Mouse released!");
-                }
-            };
-
             ActionListener exitListener = new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     logger.debug("Exiting...");
@@ -66,17 +43,7 @@ public class Main {
 
             trayIcon = new TrayIcon(image, "Tray Demo", popup);
 
-            ActionListener actionListener = new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
-                    trayIcon.displayMessage("Action Event",
-                            "An Action Event Has Been Performed!",
-                            TrayIcon.MessageType.INFO);
-                }
-            };
-
             trayIcon.setImageAutoSize(true);
-            trayIcon.addActionListener(actionListener);
-            trayIcon.addMouseListener(mouseListener);
 
             try {
                 tray.add(trayIcon);

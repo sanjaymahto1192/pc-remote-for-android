@@ -41,7 +41,7 @@ public class Layout {
     public boolean isError;
 
     @XmlElement(name = "text")
-    public String getText() throws XmlValidationException {
+    public String getXML() throws XmlValidationException {
         StringWriter writer = new StringWriter();
         try {
             JAXBContext context = JAXBContext.newInstance(RC.class);
@@ -55,7 +55,7 @@ public class Layout {
         return writer.toString();
     }
 
-    public void setText(String data) throws XmlValidationException {
+    public void setXML(String data) throws XmlValidationException {
         StringReader reader = new StringReader(data);
         RC result = null;
         try {

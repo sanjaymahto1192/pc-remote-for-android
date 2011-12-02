@@ -1,6 +1,5 @@
-package hu.za.pc_remote.RCLayoutsManagement;
+package hu.za.pc_remote.layoutsmanagement;
 
-import hu.za.pc_remote.common.ListItemJSONConstants;
 import org.json.JSONException;
 import org.json.JSONObject;
 

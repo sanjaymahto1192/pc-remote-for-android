@@ -20,10 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.RCBuilder.RCBuilder"/>
-        <activity android:name=".ui.RCLayouts.LayoutDownloader"/>
-        <activity android:name=".ui.RCLayouts.LayoutManager"/>
-        <activity android:name=".ui.RCBuilder.SelectLayout"/>
+        <activity android:name=".ui.remotecontrol.RemoteControl"/>
+        <activity android:name=".ui.layoutmanager.LayoutDownloader"/>
+        <activity android:name=".ui.layoutmanager.LayoutManager"/>
+        <activity android:name=".ui.remotecontrol.SelectLayout"/>
         <service android:name=".transport.ConnectionHandlingService"/>
     </application>
 </manifest>

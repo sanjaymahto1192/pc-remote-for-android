@@ -90,7 +90,7 @@ public class DAO {
             while (resultSet.next()) {
                 result.id = resultSet.getInt("id");
                 result.name = (resultSet.getString("name"));
-                result.setText(resultSet.getString("text"));
+                result.setXML(resultSet.getString("text"));
             }
 
         } catch (SQLException se) {
@@ -130,7 +130,7 @@ public class DAO {
             connection = getJNDIConnection();
             preparedStatement = connection.prepareStatement(updateLayoutQuery);
             preparedStatement.setString(1, layout.name);
-            preparedStatement.setString(2, layout.getText());
+            preparedStatement.setString(2, layout.getXML());
             preparedStatement.setInt(3, layout.id);
             preparedStatement.execute();
 
@@ -165,7 +165,7 @@ public class DAO {
             connection = getJNDIConnection();
             preparedStatement = connection.prepareStatement(insertLayoutQuery);
             preparedStatement.setString(1, layout.name);
-            preparedStatement.setString(2, layout.getText());
+            preparedStatement.setString(2, layout.getXML());
             preparedStatement.execute();
 
         } catch (SQLException se) {

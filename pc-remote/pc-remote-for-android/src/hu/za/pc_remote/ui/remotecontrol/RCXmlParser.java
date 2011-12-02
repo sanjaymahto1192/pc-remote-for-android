@@ -1,4 +1,4 @@
-package hu.za.pc_remote.ui.RCBuilder;
+package hu.za.pc_remote.ui.remotecontrol;
 
 import android.content.Context;
 import android.view.View;
@@ -12,9 +12,10 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderAdapter;
 import android.util.Log;
 
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -33,7 +34,7 @@ public class RCXmlParser extends XMLReaderAdapter {
     private static final String buttonText = "text";
     private static final String buttonKeyCode = "key";
     private static final String touchPadTag = "touchpad";
-    private static final String keyboarTag = "keyboard";
+    private static final String keyboardTag = "keyboard";
 
     private View result = null;
 
@@ -42,12 +43,19 @@ public class RCXmlParser extends XMLReaderAdapter {
     private TableLayout table = null;
     private TableRow row = null;
 
-    public RCXmlParser(XMLReader xmlReader, Context context) {
+    public static RCXmlParser getNewInstance(Context context) throws SAXException, ParserConfigurationException {
+        SAXParserFactory spf = SAXParserFactory.newInstance();
+        SAXParser sp = spf.newSAXParser();
+        XMLReader xr = sp.getXMLReader();
+        return new RCXmlParser(xr, context);
+    }
+
+    private RCXmlParser(XMLReader xmlReader, Context context) {
         super(xmlReader);
         this.context = context;
     }
 
-    public View getResult(){
+    public View getResult() {
         return result;
     }
 
@@ -58,7 +66,7 @@ public class RCXmlParser extends XMLReaderAdapter {
         if (localName.equals(tableTag)) {
             table = new TableLayout(context);
         } else if (localName.equals(rowTag)) {
-            if(table != null){
+            if (table != null) {
                 row = new TableRow(context);
                 table.addView(row);
             }
@@ -68,11 +76,11 @@ public class RCXmlParser extends XMLReaderAdapter {
                 action.type = RCAction.Type.KEY_PRESS;
                 action.arguments = new Serializable[1];
                 String key = atts.getValue(buttonKeyCode);
-                try{
+                try {
                     action.arguments[0] = KeyCode.valueOf(key);
-                }catch (IllegalArgumentException iae){
-                    if(key.length() > 0)
-                        action.arguments[0] = new Integer((int)key.charAt(0));
+                } catch (IllegalArgumentException iae) {
+                    if (key.length() > 0)
+                        action.arguments[0] = new Integer((int) key.charAt(0));
                 }
                 RCButton button = new RCButton(action, context);
                 button.setText(atts.getValue(buttonText));
@@ -80,7 +88,7 @@ public class RCXmlParser extends XMLReaderAdapter {
             }
         } else if (localName.equals(touchPadTag)) {
             touchPad = new TouchPad(context);
-        } else if (localName.equals(keyboarTag)) {
+        } else if (localName.equals(keyboardTag)) {
             keyboard = new Keyboard(context);
         }
     }
@@ -93,7 +101,7 @@ public class RCXmlParser extends XMLReaderAdapter {
             result = table;
         } else if (localName.equals(touchPadTag)) {
             result = touchPad;
-        } else if (localName.equals(keyboarTag)) {
+        } else if (localName.equals(keyboardTag)) {
             result = keyboard;
         }
     }

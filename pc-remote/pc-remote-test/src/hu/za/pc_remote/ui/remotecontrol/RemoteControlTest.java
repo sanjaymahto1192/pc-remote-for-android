@@ -1,17 +1,13 @@
-package hu.za.pc_remote.ui.RCBuilder;
+package hu.za.pc_remote.ui.remotecontrol;
 
-import android.os.Environment;
 import android.test.ActivityInstrumentationTestCase2;
 import android.util.Xml;
 import android.view.View;
 import android.widget.TableLayout;
-import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-import java.io.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -20,12 +16,12 @@ import java.io.*;
  * Time: 11:31 PM
  * To change this template use File | Settings | File Templates.
  */
-public class RCBuilderTest extends ActivityInstrumentationTestCase2<RCBuilder> {
+public class RemoteControlTest extends ActivityInstrumentationTestCase2<RemoteControl> {
 
-    private RCBuilder mActivity;
+    private RemoteControl mActivity;
 
-    public RCBuilderTest() {
-        super("hu.za.pc_remote.ui.RCBuilder", RCBuilder.class);
+    public RemoteControlTest() {
+        super("hu.za.pc_remote.ui.remotecontrol", RemoteControl.class);
     }
 
     @Override

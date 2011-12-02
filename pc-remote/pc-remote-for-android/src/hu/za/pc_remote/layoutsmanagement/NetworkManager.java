@@ -1,7 +1,5 @@
-package hu.za.pc_remote.RCLayoutsManagement;
+package hu.za.pc_remote.layoutsmanagement;
 
-import android.os.Environment;
-import android.os.Handler;
 import android.util.Log;
 import org.apache.http.*;
 import org.apache.http.client.HttpClient;
@@ -16,7 +14,6 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static hu.za.pc_remote.common.LayoutJSONConstants.ID;
 import static hu.za.pc_remote.common.LayoutJSONConstants.NAME;
 import static hu.za.pc_remote.common.LayoutJSONConstants.TEXT;
 
@@ -72,7 +69,6 @@ public class NetworkManager {
     public void saveLayout(int id) {
         HttpClient hc = new DefaultHttpClient();
         BasicHttpRequest request = new BasicHttpRequest("GET", getLayoutURI + id);
-        FileWriter fr = null;
         try {
             HttpResponse response = hc.execute(host, request);
             int status = response.getStatusLine().getStatusCode();
@@ -94,14 +90,6 @@ public class NetworkManager {
             Log.e("saveLayout", "Failed to execute HTTP request", e);
         } catch (JSONException e) {
             Log.e("saveLayout", "Failed to parse JSONObject", e);
-        } finally {
-            if (fr != null) {
-                try {
-                    fr.close();
-                } catch (IOException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                }
-            }
         }
     }
 

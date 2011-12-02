@@ -1,5 +1,6 @@
 package hu.za.pc_remote.ui;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -30,7 +31,7 @@ import android.os.Handler;
  * Time: 6:49 PM
  * To change this template use File | Settings | File Templates.
  */
-public class ConnectionSettings extends UIActivityBase {
+public class ConnectionSettings extends Activity {
 
     private static final String tag = "ConnectionSettings";
     private boolean mIsBound;
@@ -50,7 +51,12 @@ public class ConnectionSettings extends UIActivityBase {
             final Handler handler = new Handler() {
                 public void handleMessage(Message msg) {
                     dialog.dismiss();
-                    setDisconnectLayout();
+                    if(mConnService.hasTransportManager()){
+                        setDisconnectLayout();
+                    }
+                    else{
+                        Toast.makeText(ConnectionSettings.this, getText(R.string.FailedToConnect), Toast.LENGTH_SHORT).show();
+                    }
                 }
             };
 
@@ -67,7 +73,6 @@ public class ConnectionSettings extends UIActivityBase {
 
     private View.OnClickListener mDisconnectListener = new View.OnClickListener() {
         public void onClick(View view) {
-            closeSocket();
             if (mConnService != null) {
                 mConnService.setTransportManager(null, null, null);
                 setConnectLayout();
@@ -153,11 +158,12 @@ public class ConnectionSettings extends UIActivityBase {
         button.setOnClickListener(mDisconnectListener);
     }
 
-    private void connectToDevice(BluetoothDevice device) {
+    public void connectToDevice(BluetoothDevice device) {
         try {
             socket = device.createRfcommSocketToServiceRecord(mServiceUUID);
             socket.connect();
-            TransportManager transportManager = new TransportManager(new ObjectOutputStream(socket.getOutputStream()));
+            TransportManager transportManager = new TransportManager(
+                    new ObjectOutputStream(socket.getOutputStream()));
             mConnService.setTransportManager(
                     transportManager,
                     String.format("%s (%s)", device.getName(), device.getAddress()),
@@ -166,7 +172,7 @@ public class ConnectionSettings extends UIActivityBase {
                             try {
                                 socket.close();
                             } catch (IOException e) {
-                                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                                Log.e(tag, "Failed to close Socket:", e);
                             }
                         }
                     });

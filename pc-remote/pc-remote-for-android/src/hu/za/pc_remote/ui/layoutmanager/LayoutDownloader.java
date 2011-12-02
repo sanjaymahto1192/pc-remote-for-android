@@ -1,4 +1,4 @@
-package hu.za.pc_remote.ui.RCLayouts;
+package hu.za.pc_remote.ui.layoutmanager;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 import hu.za.pc_remote.R;
-import hu.za.pc_remote.RCLayoutsManagement.LayoutListItem;
-import hu.za.pc_remote.RCLayoutsManagement.NetworkManager;
-import org.w3c.dom.Text;
+import hu.za.pc_remote.layoutsmanagement.FileManager;
+import hu.za.pc_remote.layoutsmanagement.LayoutListItem;
+import hu.za.pc_remote.layoutsmanagement.NetworkManager;
 
 import java.util.List;
 
@@ -34,7 +34,7 @@ public class LayoutDownloader extends Activity {
 
         adapter = new ArrayAdapter<LayoutListItem>(LayoutDownloader.this, R.layout.simplelistitem);
 
-        empty = (TextView)findViewById(R.id.LayoutDownloaderNoNewTextView);
+        empty = (TextView) findViewById(R.id.LayoutDownloaderNoNewTextView);
         listView = (ListView) findViewById(R.id.LayoutDownloaderListView);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new SaveClickListener());
@@ -63,7 +63,7 @@ public class LayoutDownloader extends Activity {
                                         adapter.add(item);
                                     }
                                 dialog.dismiss();
-                                empty.setVisibility(adapter.getCount()==0? VISIBLE: INVISIBLE);
+                                empty.setVisibility(adapter.getCount() == 0 ? VISIBLE : INVISIBLE);
                             }
                         }
                 );
@@ -86,25 +86,34 @@ public class LayoutDownloader extends Activity {
 
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
             final LayoutListItem item = adapter.getItem(i);
-
-            if (networkManager != null) {
-                new Thread() {
-                    @Override
-                    public void run() {
-                        networkManager.saveLayout(item.getId());
-                        runOnUiThread(
-                                new Runnable() {
-                                    public void run() {
-                                        refreshAdapter();
-                                        Toast.makeText(
-                                                LayoutDownloader.this,
-                                                getString(R.string.downloadSuccessful),
-                                                Toast.LENGTH_SHORT).show();
+            if (FileManager.isStorageWritable()) {
+                if (networkManager != null) {
+                    new Thread() {
+                        @Override
+                        public void run() {
+                            networkManager.saveLayout(item.getId());
+                            runOnUiThread(
+                                    new Runnable() {
+                                        public void run() {
+                                            refreshAdapter();
+                                            Toast.makeText(
+                                                    LayoutDownloader.this,
+                                                    getString(R.string.downloadSuccessful),
+                                                    Toast.LENGTH_SHORT).show();
+                                        }
                                     }
-                                }
-                        );
-                    }
-                }.start();
+                            );
+                        }
+                    }.start();
+                }
+            } else {
+                adapter.clear();
+                empty.setVisibility(VISIBLE);
+                Toast.makeText(
+                        LayoutDownloader.this,
+                        getText(R.string.StorageNotAvailable),
+                        Toast.LENGTH_SHORT
+                );
             }
         }
     }

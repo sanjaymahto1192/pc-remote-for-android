@@ -1,4 +1,4 @@
-package hu.za.pc_remote.ui.RCBuilder;
+package hu.za.pc_remote.ui.remotecontrol;
 
 import android.content.Context;
 import android.content.Intent;
