@@ -5,34 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="295b8dfe-30d8-490b-8e58-4a7d201005ff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jersey-webapp/src/test/java/JerseyTestApp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pc-remote-test/src/hu/za/pc_remote/layoutsmanagement/LayoutListItemTest.java" />
-      <change type="DELETED" beforePath="C:\Users\Andor\diploma\git\pc-remote\pc-remote-for-android\src\hu\za\pc_remote\HelloActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Andor\diploma\git\pc-remote\pc-remote-test\src\hu\za\pc_remote\HelloActivityTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/res/drawable-hdpi/icon.png" afterPath="$PROJECT_DIR$/pc-remote-for-android/res/drawable-hdpi/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/res/drawable-ldpi/icon.png" afterPath="$PROJECT_DIR$/pc-remote-for-android/res/drawable-ldpi/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/res/drawable-mdpi/icon.png" afterPath="$PROJECT_DIR$/pc-remote-for-android/res/drawable-mdpi/icon.png" />
+      <change type="DELETED" beforePath="C:\Users\Andor\diploma\git\pc-remote\xml-generator\pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Andor\diploma\git\pc-remote\xml-generator\src\main\java\hu\za\pc_remote\xmlgeneration\XmlGenerator.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Andor\diploma\git\pc-remote\xml-generator\xml-generator.iml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/common.iml" afterPath="$PROJECT_DIR$/common/common.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/pom.xml" afterPath="$PROJECT_DIR$/common/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java" afterPath="$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/BTManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/EventSender.java" afterPath="$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/EventSender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/Main.java" afterPath="$PROJECT_DIR$/desktop-agent/src/main/java/hu/za/pc_remote/desktop_agent/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jersey-webapp/jersey-webapp.iml" afterPath="$PROJECT_DIR$/jersey-webapp/jersey-webapp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jersey-webapp/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/jersey-webapp/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jersey-webapp/src/main/webapp/index.htm" afterPath="$PROJECT_DIR$/jersey-webapp/src/main/webapp/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/AndroidManifest.xml" afterPath="$PROJECT_DIR$/pc-remote-for-android/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/pc-remote-for-android.iml" afterPath="$PROJECT_DIR$/pc-remote-for-android/pc-remote-for-android.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/ConnectionSettings.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/ConnectionSettings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/layoutmanager/LayoutManager.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/layoutmanager/LayoutManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/remotecontrol/Keyboard.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/remotecontrol/Keyboard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/remotecontrol/RCXmlParser.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/remotecontrol/RCXmlParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/remotecontrol/RemoteControl.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/remotecontrol/RemoteControl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/remotecontrol/TouchPad.java" afterPath="$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/remotecontrol/TouchPad.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-test/pc-remote-test.iml" afterPath="$PROJECT_DIR$/pc-remote-test/pc-remote-test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-test/src/hu/za/pc_remote/transport/ConnectionHandlingServiceTest.java" afterPath="$PROJECT_DIR$/pc-remote-test/src/hu/za/pc_remote/transport/ConnectionHandlingServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pc-remote-test/src/hu/za/pc_remote/ui/remotecontrol/RemoteControlTest.java" afterPath="$PROJECT_DIR$/pc-remote-test/src/hu/za/pc_remote/ui/remotecontrol/RemoteControlTest.java" />
     </list>
     <ignored path="pc-remote.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -181,7 +159,7 @@
       <file leaf-file-name="LayoutManager.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/layoutmanager/LayoutManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="91" selection-start="2750" selection-end="2750" vertical-scroll-proportion="0.046015713">
+            <state line="83" column="91" selection-start="2750" selection-end="2750" vertical-scroll-proportion="0.027914613">
               <folding />
             </state>
           </provider>
@@ -265,8 +243,9 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Favorites" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -285,101 +264,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc_remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc_remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc-remote-for-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc_remote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layoutmanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1135,24 +1021,24 @@
       <method />
     </configuration>
     <list size="18">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.LayoutListItemTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.LayoutListItemTest.parseTest" />
-      <item index="2" class="java.lang.String" itemvalue="Android Application.pc-remote" />
-      <item index="3" class="java.lang.String" itemvalue="Android Tests.pc-remote test" />
-      <item index="4" class="java.lang.String" itemvalue="Application.run desktop agent" />
-      <item index="5" class="java.lang.String" itemvalue="Application.generate xml" />
-      <item index="6" class="java.lang.String" itemvalue="Application.Jersey Test App" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.EventSenderTest.MoveMouseTest" />
-      <item index="8" class="java.lang.String" itemvalue="JUnit.EventSenderTest" />
-      <item index="9" class="java.lang.String" itemvalue="Maven.jersey jetty:run" />
-      <item index="10" class="java.lang.String" itemvalue="Maven.jersey package" />
-      <item index="11" class="java.lang.String" itemvalue="Maven.common clean install" />
-      <item index="12" class="java.lang.String" itemvalue="Maven.parent clean install" />
-      <item index="13" class="java.lang.String" itemvalue="Maven.desktop agent clean install" />
-      <item index="14" class="java.lang.String" itemvalue="Maven.desktop agent test" />
-      <item index="15" class="java.lang.String" itemvalue="Maven.jersey tomcat redeploy" />
-      <item index="16" class="java.lang.String" itemvalue="Remote.Tomcat local" />
-      <item index="17" class="java.lang.String" itemvalue="JUnit.MyTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.EventSenderTest.MoveMouseTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.MyTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.LayoutListItemTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.LayoutListItemTest.parseTest" />
+      <item index="4" class="java.lang.String" itemvalue="Android Application.pc-remote" />
+      <item index="5" class="java.lang.String" itemvalue="Android Tests.pc-remote test" />
+      <item index="6" class="java.lang.String" itemvalue="Application.run desktop agent" />
+      <item index="7" class="java.lang.String" itemvalue="Application.generate xml" />
+      <item index="8" class="java.lang.String" itemvalue="Application.Jersey Test App" />
+      <item index="9" class="java.lang.String" itemvalue="JUnit.EventSenderTest" />
+      <item index="10" class="java.lang.String" itemvalue="Maven.jersey jetty:run" />
+      <item index="11" class="java.lang.String" itemvalue="Maven.jersey package" />
+      <item index="12" class="java.lang.String" itemvalue="Maven.common clean install" />
+      <item index="13" class="java.lang.String" itemvalue="Maven.parent clean install" />
+      <item index="14" class="java.lang.String" itemvalue="Maven.desktop agent clean install" />
+      <item index="15" class="java.lang.String" itemvalue="Maven.desktop agent test" />
+      <item index="16" class="java.lang.String" itemvalue="Maven.jersey tomcat redeploy" />
+      <item index="17" class="java.lang.String" itemvalue="Remote.Tomcat local" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1210,7 +1096,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-290" width="1696" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1318" height="784" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1219,10 +1105,10 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39449543" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721713" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14731051" sideWeight="0.60091746" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14705883" sideWeight="0.60091746" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19559902" sideWeight="0.60091746" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19395867" sideWeight="0.60091746" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39908257" sideWeight="0.49755502" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4969419" sideWeight="0.49755502" order="11" side_tool="false" content_ui="tabs" />
@@ -1362,16 +1248,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pc-remote-test/src/hu/za/pc_remote/ui/remotecontrol/RemoteControlTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="17" selection-start="1852" selection-end="1852" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="60" column="17" selection-start="1852" selection-end="1852" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pc-remote-for-android/src/hu/za/pc_remote/ui/layoutmanager/LayoutManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="91" selection-start="2750" selection-end="2750" vertical-scroll-proportion="0.046015713">
-          <folding />
-        </state>
+        <state line="83" column="91" selection-start="2750" selection-end="2750" vertical-scroll-proportion="0.027914613" />
       </provider>
     </entry>
   </component>
