@@ -21,45 +21,35 @@ public class ConnectionHandlingServiceTest extends ServiceTestCase<ConnectionHan
         super(ConnectionHandlingService.class);
     }
 
-    public void testObjectOutputStreams() throws Exception {
+    public void testEventSending() throws Exception {
 
         RCAction extra = new RCAction();
         extra.type = RCAction.Type.MOUSE_MOVE;
-        extra.arguments = new float[]{2, 5};
+        extra.arguments = new Float[]{(float)2, (float)5};
 
         this.startService(new Intent());
         ConnectionHandlingService service = getService();
-        final List<Integer> data = new ArrayList<Integer>();
 
         try {
-            ObjectOutputStream oos = new ObjectOutputStream(new OutputStream() {
-                @Override
-                public void write(int i) throws IOException {
-                    data.add(i);
-                }
-            });
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            ObjectOutputStream oos = new ObjectOutputStream(stream);
 
-            service.setTransportManager(new TransportManager(oos), null, null);
+            service.setTransportManager(
+                    new TransportManager(oos),
+                    "Test",
+                    null);
 
             Intent i = new Intent(ConnectionHandlingService.RC_INTENT_ACTION);
             i.putExtra(ConnectionHandlingService.INTENT_DATA_EXTRA_KEY, extra);
-
             getSystemContext().sendBroadcast(i);
             getSystemContext().sendBroadcast(i);
             getSystemContext().sendBroadcast(i);
             getSystemContext().sendBroadcast(i);
 
-            ObjectInputStream ois = new ObjectInputStream(new InputStream() {
-                @Override
-                public int read() throws IOException {
-                    if (data.isEmpty())
-                        return 0;
-                    Integer result = data.get(0);
-                    data.remove(result);
-                    return result.intValue();
-                }
-            });
+            Thread.sleep(1000);
 
+            ObjectInputStream ois = new ObjectInputStream(
+                    new ByteArrayInputStream(stream.toByteArray()));
 
             checkResult((RCAction) ois.readObject());
             checkResult((RCAction) ois.readObject());
@@ -74,14 +64,14 @@ public class ConnectionHandlingServiceTest extends ServiceTestCase<ConnectionHan
 
     }
 
-    public void checkResult(RCAction rca) {
+    private void checkResult(RCAction rca) {
         if (!rca.type.equals(RCAction.Type.MOUSE_MOVE)) {
             Assert.fail("type not match");
         }
-        if (!(rca.arguments[0] == 2)) {
+        if (!((Float)rca.arguments[0] == 2)) {
             Assert.fail("first argument not match");
         }
-        if (!(rca.arguments[1] == 5)) {
+        if (!((Float)rca.arguments[1] == 5)) {
             Assert.fail("second argument not match");
         }
     }

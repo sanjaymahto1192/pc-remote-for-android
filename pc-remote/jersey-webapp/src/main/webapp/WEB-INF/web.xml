@@ -17,6 +17,40 @@
         <url-pattern>/webresources/*</url-pattern>
     </servlet-mapping>
 
+    <!-- <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Wildcard means whole app requires authentication</web-resource-name>
+            <url-pattern>/*</url-pattern>
+            <http-method>PUT</http-method>
+            <http-method>POST</http-method>
+            <http-method>DELETE</http-method>
+        </web-resource-collection>
+
+        <web-resource-collection>
+            <web-resource-name>New Layout page</web-resource-name>
+            <url-pattern>/EditLayout.htm</url-pattern>
+            <http-method>GET</http-method>
+        </web-resource-collection>
+
+        <web-resource-collection>
+            <web-resource-name>list layouts page</web-resource-name>
+            <url-pattern>/index.htm</url-pattern>
+            <http-method>GET</http-method>
+        </web-resource-collection>
+
+        <auth-constraint>
+            <role-name>pcremote</role-name>
+        </auth-constraint>
+
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint> -->
+
+    <login-config>
+        <auth-method>BASIC</auth-method>
+    </login-config>
+
     <resource-ref>
         <description>My DataSource Reference</description>
         <res-ref-name>jdbc/mysqldb</res-ref-name>

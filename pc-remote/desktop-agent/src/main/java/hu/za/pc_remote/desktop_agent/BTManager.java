@@ -27,9 +27,9 @@ public class BTManager extends Thread {
     private static Logger logger = Logger.getLogger(BTManager.class);
 
     private TrayIcon trayIcon;
-    public final UUID uuid = new UUID("0123456700001000800000805F9B34FB", false);
-    public final String name = "Echo Server"; // the name of the service
-    public final String url = "btspp://localhost:" + uuid + ";name=" + name + ";authenticate=true;encrypt=true;";
+    public final UUID uuid = new UUID("0000110100001000800000805F9B34FB", false);
+    public final String name = "pcremote"; // the name of the service
+    public final String url = "btspp://localhost:" + uuid + ";name=" + name + ";";
     LocalDevice local = null;
     StreamConnectionNotifier server = null;
     StreamConnection conn = null;
@@ -56,6 +56,7 @@ public class BTManager extends Thread {
         try {
 
             logger.debug("Start advertising service...");
+            logger.debug(url);
             server = (StreamConnectionNotifier) Connector.open(url);
             logger.debug("Waiting for incoming connection...");
 

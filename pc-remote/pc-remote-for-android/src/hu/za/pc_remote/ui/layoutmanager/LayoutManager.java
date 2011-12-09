@@ -87,7 +87,9 @@ public class LayoutManager extends Activity {
     }
 
     private class DeleteClickListener implements ListView.OnItemClickListener {
-        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+        public void onItemClick(
+                AdapterView<?> adapterView, View view, int i, long l) {
             final LayoutListItem item = adapter.getItem(i);
             AlertDialog.Builder builder = new AlertDialog.Builder(LayoutManager.this);
             builder.setTitle(item.getName());
@@ -103,9 +105,9 @@ public class LayoutManager extends Activity {
                                         new Runnable() {
                                             public void run() {
                                                 Toast.makeText(
-                                                        LayoutManager.this,
-                                                        getString(R.string.layoutDeleted),
-                                                        Toast.LENGTH_SHORT).show();
+                                                   LayoutManager.this,
+                                                   getString(R.string.layoutDeleted),
+                                                   Toast.LENGTH_SHORT).show();
                                                 refreshAdapter();
                                             }
                                         }
@@ -124,5 +126,6 @@ public class LayoutManager extends Activity {
             AlertDialog alert = builder.create();
             alert.show();
         }
+
     }
 }

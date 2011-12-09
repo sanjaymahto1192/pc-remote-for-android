@@ -35,7 +35,7 @@ public class ConnectionSettings extends Activity {
 
     private static final String tag = "ConnectionSettings";
     private boolean mIsBound;
-    private static final UUID mServiceUUID = UUID.fromString("01234567-0000-1000-8000-00805F9B34FB");
+    private static final UUID mServiceUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     private ConnectionHandlingService mConnService;
     private ArrayAdapter mDevicesAdapter;
     private String mAddress;
@@ -160,7 +160,8 @@ public class ConnectionSettings extends Activity {
 
     public void connectToDevice(BluetoothDevice device) {
         try {
-            socket = device.createRfcommSocketToServiceRecord(mServiceUUID);
+            socket = device.createInsecureRfcommSocketToServiceRecord(mServiceUUID);
+            //socket = device.createRfcommSocketToServiceRecord(mServiceUUID);
             socket.connect();
             TransportManager transportManager = new TransportManager(
                     new ObjectOutputStream(socket.getOutputStream()));

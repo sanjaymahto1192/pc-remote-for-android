@@ -70,13 +70,6 @@ public class TouchPad extends SurfaceView implements SurfaceHolder.Callback {
             vx += velocityX;
             vy += velocityY;
 
-            /*           Intent i = new Intent(ConnectionHandlingService.RC_INTENT_ACTION);
-            RCAction extra = new RCAction();
-            extra.type = RCAction.Type.MOUSE_MOVE;
-            extra.arguments = new Float[]{new Float(0), new Float(0), velocityX, velocityY};
-            i.putExtra(ConnectionHandlingService.INTENT_DATA_EXTRA_KEY, extra);
-            context.sendBroadcast(i);*/
-
             return true;
         }
 
@@ -100,7 +93,7 @@ public class TouchPad extends SurfaceView implements SurfaceHolder.Callback {
         }
 
         @Override
-        public boolean onSingleTapUp(MotionEvent e) {
+        public boolean onSingleTapConfirmed(MotionEvent e) {
             Intent i = new Intent(ConnectionHandlingService.RC_INTENT_ACTION);
             RCAction extra = new RCAction();
             extra.type = RCAction.Type.MOUSE_CLICK;
@@ -108,6 +101,20 @@ public class TouchPad extends SurfaceView implements SurfaceHolder.Callback {
             i.putExtra(ConnectionHandlingService.INTENT_DATA_EXTRA_KEY, extra);
             context.sendBroadcast(i);
 
+            return true;
+        }
+
+        @Override
+        public boolean onDoubleTapEvent(MotionEvent e) {
+            for(int k=0;k<2;k++){
+                Intent i = new Intent(ConnectionHandlingService.RC_INTENT_ACTION);
+                RCAction extra = new RCAction();
+                extra.type = RCAction.Type.MOUSE_CLICK;
+                extra.arguments = new Integer[]{new Integer(1)};
+                i.putExtra(ConnectionHandlingService.INTENT_DATA_EXTRA_KEY, extra);
+
+                context.sendBroadcast(i);
+            }
             return true;
         }
     }
@@ -122,7 +129,7 @@ public class TouchPad extends SurfaceView implements SurfaceHolder.Callback {
                     Intent i = new Intent(ConnectionHandlingService.RC_INTENT_ACTION);
                     RCAction extra = new RCAction();
                     extra.type = RCAction.Type.MOUSE_MOVE;
-                    extra.arguments = new Float[]{sensitivity * dx, sensitivity * dy, new Float(0), new Float(0)};
+                    extra.arguments = new Float[]{sensitivity * dx, sensitivity * dy};
                     i.putExtra(ConnectionHandlingService.INTENT_DATA_EXTRA_KEY, extra);
                     context.sendBroadcast(i);
                 }
@@ -132,7 +139,7 @@ public class TouchPad extends SurfaceView implements SurfaceHolder.Callback {
                 try {
                     Thread.sleep(40);
                 } catch (InterruptedException e) {
-                    Log.w("hello", "Drawer thread interrupted");
+                    Log.w("Sender", "Drawer thread interrupted", e);
                 }
             }
         }

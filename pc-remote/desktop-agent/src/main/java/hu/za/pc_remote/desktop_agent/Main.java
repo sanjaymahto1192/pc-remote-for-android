@@ -4,8 +4,6 @@ package hu.za.pc_remote.desktop_agent;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 import org.apache.log4j.Logger;
 
@@ -41,7 +39,7 @@ public class Main {
             defaultItem.addActionListener(exitListener);
             popup.add(defaultItem);
 
-            trayIcon = new TrayIcon(image, "Tray Demo", popup);
+            trayIcon = new TrayIcon(image, "Bluetooth remote agent", popup);
 
             trayIcon.setImageAutoSize(true);
 

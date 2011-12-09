@@ -68,23 +68,6 @@ public class EventSender {
                 } else if (o instanceof Integer) {
                     char c = Character.toUpperCase((char) ((Integer) o).intValue());
 
-                    if (c == ',') {
-                        c = (char) KeyCode.VK_OEM_COMMA.getCode();
-                    } else if (c == '@') {
-                        c = KeyEvent.VK_AT;
-                    }
-
-                    switch (c){
-                        case '+': c = (char) KeyCode.VK_OEM_PLUS.getCode();
-                            break;
-                        case '-': c = (char) KeyCode.VK_OEM_MINUS.getCode();
-                            break;
-                        case ',': c = (char) KeyCode.VK_OEM_COMMA.getCode();
-                            break;
-                        case '.': c = (char) KeyCode.VK_OEM_PERIOD.getCode();
-                            break;
-                    }
-
                     if (logger.isDebugEnabled()) {
                         logger.debug("Sending KeyPress:" + c + " (int:" + (int) c);
                     }

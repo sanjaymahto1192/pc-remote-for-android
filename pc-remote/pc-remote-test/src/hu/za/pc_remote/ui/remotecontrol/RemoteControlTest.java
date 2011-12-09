@@ -1,6 +1,9 @@
 package hu.za.pc_remote.ui.remotecontrol;
 
+import android.app.Application;
+import android.content.Context;
 import android.test.ActivityInstrumentationTestCase2;
+import android.text.AndroidCharacter;
 import android.util.Xml;
 import android.view.View;
 import android.widget.TableLayout;
@@ -27,31 +30,25 @@ public class RemoteControlTest extends ActivityInstrumentationTestCase2<RemoteCo
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        mActivity = this.getActivity();
     }
 
     public void testParser() throws Exception {
 
         String testXML =
-                        "<rc>\n" +
-                        "\t<table>\n" +
-                        "\t\t<row>\n" +
-                        "\t\t\t<button actiontype=\"KEY_PRESS\"/>\n" +
-                        "\t\t\t<button actiontype=\"KEY_PRESS\"/>\n" +
-                        "\t\t</row>\n" +
-                        "\t\t<row>\n" +
-                        "\t\t\t<button actiontype=\"KEY_PRESS\"/>\n" +
-                        "\t\t\t<button actiontype=\"KEY_PRESS\"/>\n" +
-                        "\t\t</row>\n" +
-                        "\t</table>\n" +
-                        "</rc>";
+               "<rc>\n" +
+               "    <table>\n" +
+               "        <row>\n" +
+               "            <button key=\"VK_UP\" text=\"Vol +\"/>\n" +
+               "            <button key=\"VK_DOWN\" text=\"Vol -\"/>\n" +
+               "        </row>\n" +
+               "        <row>\n" +
+               "            <button key=\"F\" text=\"F\"/>\n" +
+               "            <button key=\"O\" text=\"O\"/>\n" +
+               "        </row>\n" +
+               "    </table>\n" +
+               "</rc>";
 
-
-        SAXParserFactory spf = SAXParserFactory.newInstance();
-        SAXParser sp = null;
-        sp = spf.newSAXParser();
-        XMLReader xr = sp.getXMLReader();
-        RCXmlParser parser = new RCXmlParser(xr, mActivity);
+        RCXmlParser parser = RCXmlParser.getNewInstance(getActivity());
         Xml.parse(testXML, parser);
 
         View v = parser.getResult();

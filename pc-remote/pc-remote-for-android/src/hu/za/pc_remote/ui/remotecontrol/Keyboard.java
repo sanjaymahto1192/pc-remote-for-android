@@ -39,19 +39,18 @@ public class Keyboard extends EditText {
             Log.i("text changed", "chars: " + charSequence + " start: " + start + " before: " + before + " count: " + count);
             Serializable arg = null;
 
-            if(before == count){
+            if (before == count) {
                 return;
             }
 
-            if(before > count){
+            if (before > count) {
                 arg = KeyCode.VK_BACK;
-            }
-            else if (charSequence.length() > start + count - 1) {
+            } else if (charSequence.length() > start + count - 1) {
                 char c = charSequence.charAt(start + count - 1);
-                arg = c == ' ' ? KeyCode.VK_SPACE : new Integer((int) c );
+                arg = char2KeyCode(c);
             }
 
-            if(arg == null)
+            if (arg == null)
                 return;
 
             Intent i = new Intent(ConnectionHandlingService.RC_INTENT_ACTION);
@@ -66,5 +65,26 @@ public class Keyboard extends EditText {
 
         }
 
+        private Serializable char2KeyCode(char c) {
+
+            switch (c) {
+                case '+':
+                    return KeyCode.VK_ADD;
+                case '-':
+                    return KeyCode.VK_SUBTRACT;
+                case ',':
+                    return KeyCode.VK_OEM_COMMA;
+                case '.':
+                    return KeyCode.VK_OEM_PERIOD;
+                case ' ':
+                    return KeyCode.VK_SPACE;
+                case '/':
+                    return KeyCode.VK_DIVIDE;
+                case '*':
+                    return KeyCode.VK_MULTIPLY;
+            }
+
+            return new Integer((int) c);
+        }
     }
 }

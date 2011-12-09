@@ -56,12 +56,10 @@ public class RemoteControl extends Activity {
         Intent starterIntent = getIntent();
         LayoutListItem item = (LayoutListItem) starterIntent.getSerializableExtra(LayoutItemKey);
 
-        if (item == null)
-            finish();
-
-        bindService(new Intent(this, ConnectionHandlingService.class), mConnection, Context.BIND_AUTO_CREATE);
-
-        setContentView(getView(item));
+        if (item != null){
+            bindService(new Intent(this, ConnectionHandlingService.class), mConnection, Context.BIND_AUTO_CREATE);
+            setContentView(getView(item));
+        }
     }
 
     public View getView(LayoutListItem item) {

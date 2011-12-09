@@ -106,7 +106,7 @@ Released   : 20111024
         //////////////
         // Fill List
         //
-        $.get(location.origin + '/jersey-webapp/webresources/layouts/list', function (data) {
+        $.get(location.protocol + '//' + location.host + '/jersey-webapp/webresources/layouts/list', function (data) {
             for (z = 0; z < data.length; z++) {
                 var item = data[z];
                 var a = $("<a id=\"alistitem" + z + "\"/>");
@@ -114,7 +114,7 @@ Released   : 20111024
                 a.attr("ItemId", item.id);
                 a.click(function (event) {
                     var id = $("#" + this.id).attr("ItemId");
-                    $.get(location.origin + '/jersey-webapp/webresources/layouts/?id=' + id, function (data) {
+                    $.get(location.protocol + '//' + location.host +  '/jersey-webapp/webresources/layouts/?id=' + id, function (data) {
                         $("#itemid").val(data.id);
                         $("#name").val(data.name);
                         $("#xml").val(data.text);
@@ -150,7 +150,7 @@ Released   : 20111024
                     },
                     processData: false,
                     type: 'POST',
-                    url: location.origin + '/jersey-webapp/webresources/layouts/'
+                    url: location.protocol + '//' + location.host +  '/jersey-webapp/webresources/layouts/'
                 });
             }
             event.preventDefault();
@@ -178,7 +178,7 @@ Released   : 20111024
                     },
                     processData: false,
                     type: 'DELETE',
-                    url: location.origin + '/jersey-webapp/webresources/layouts/?id=' + id
+                    url: location.protocol + '//' + location.host +  '/jersey-webapp/webresources/layouts/?id=' + id
                 });
             }
             event.preventDefault();

@@ -60,7 +60,10 @@ public class RCXmlParser extends XMLReaderAdapter {
     }
 
     @Override
-    public void startElement(String uri, String localName, String qName, Attributes atts) throws SAXException {
+    public void startElement(String uri,
+                             String localName,
+                             String qName,
+                             Attributes atts) throws SAXException {
         Log.i("start element", localName);
 
         if (localName.equals(tableTag)) {
@@ -94,7 +97,9 @@ public class RCXmlParser extends XMLReaderAdapter {
     }
 
     @Override
-    public void endElement(String uri, String localName, String qName) throws SAXException {
+    public void endElement(String uri,
+                           String localName,
+                           String qName) throws SAXException {
         Log.i("end element", localName);
 
         if (localName.equals(tableTag)) {
